@@ -5,6 +5,7 @@
     font-style: normal;
   }
 
+
 @font-face {
     font-family: "Space Grotesk";
     src: url('fonts/SpaceGrotesk-Bold.ttf');
@@ -12,7 +13,7 @@
     font-style: normal;
   }
 
-  :root {
+:root {
     --brand: #09393d;
   }
 
@@ -25,33 +26,43 @@ body {
     color: var(--brand);
     background-image: url("assets/bg-wireframe.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100%;
     background-position: center;
     text-align: center;
 }
 
 .container {
-    width: 800px;
+    max-width: 800px;
+    min-width: 400px;
     height: 100%;
     margin: auto;
 }
 
-.main {
-    height: 60%;
+.header-section {
+    height: 35%;
+    position: relative;
+    top: 0%;
+    margin: 0 30px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.header {
-    height: 20%;
-    position: relative;
-    top: 0%;
+.main-section {
+    height: 27%;
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
 }
 
-.footer {
-    height: 20%;
+.footer-section {
+    height: 38%;
     position: relative;
     bottom: 0%;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
@@ -61,17 +72,27 @@ body {
 
 h1 {
     font-size: 5rem;
-    line-height: 3.4rem;
+    line-height: 4.3rem;
     margin: 0px;
 }
 
 .logo {
     width: 90px;
-    margin-top: 200px;
 }
 
 .email {
     color: #41b55a;
-    font-size: 2rem;
+    line-height: 1.6rem;
+    font-size: 2rem;  
+    text-decoration: none;
+    border-bottom: 0px solid var(--brand);
+    transition: 200ms;
+    margin: 20px 0;
 }
 
+
+.email:hover {
+    color: var(--brand);
+    border-bottom: 3px solid var(--brand);
+    
+}

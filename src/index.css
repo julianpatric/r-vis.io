@@ -1,6 +1,7 @@
 :root {
   --primary-color: #09393D;
-  --bg-color: #F1F1F1;
+  --almost-white: #F1F1F1;
+  --light-gray: #DADCDD;
 }
 
 @font-face {
@@ -29,8 +30,21 @@ h2 {
   margin: 0;
 }
 
+h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
 a {
   color: inherit;
+  text-decoration: none;
+  transition-duration: 300ms;
+}
+
+a:hover {
+  border-bottom: solid 2px;
+  transition-property: border-bottom;
+  transition-duration: 300ms;
 }
 
 html, body {
@@ -39,7 +53,7 @@ html, body {
   font-weight: normal;
   color: var(--primary-color);
   max-width: 100vw;
-  background: var(--bg-color);
+  background: var(-color--almost-white);
   letter-spacing: -6%;
 }
 
@@ -58,10 +72,6 @@ ul {
   display: flex;
   align-items: center;
   gap: 35px;
-}
-
-.topBar .logo {
-  height: 32px;
 }
 
 .navBar {

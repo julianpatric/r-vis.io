@@ -1,17 +1,25 @@
 import './App.css';
-import logo from './assets/icons/logo.svg'
+import Topbar from './components/Topbar.jsx'
+import ServiceItem from './components/ServiceItem.jsx'
+import { SERVICES } from './data.js';
 
 
 function App() {
   return (
-    <div className="topBar">
-      <img src={logo} alt="Logo" className="logo"/>
-      <ul className="navBar">
-        <li>home</li>
-        <li>about</li>
-        <li>contact</li>
-      </ul>
-    </div>
+    <>
+      <div className="header">
+        <Topbar/>
+        <div className="section hero"></div>
+      </div>
+      <div className="section feature">
+        <h1>Architecture seen, felt, remembered.</h1>
+          <ul className="services">
+            {SERVICES.map((service) => (
+              <ServiceItem key={service.title} {...service} />
+            ))}
+          </ul>
+      </div>
+    </>
   );
 }
 

@@ -24,6 +24,8 @@ function App() {
       <div className="section content-section">
         <div className='container'>
           <div className="content-item"></div>
+          <div className="content-item"></div>
+          <div className="content-item"></div>
         </div>
       </div>
       <div className="footer">

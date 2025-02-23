@@ -1,0 +1,26 @@
+.footer-section {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    margin: 20px 0 0 0;
+    padding: 20px;
+  }
+  
+  .footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .footer-email {
+    width: auto;
+  }
+  
+  .footer-sitemap {
+    display: flex;
+    gap: 60px;
+  }
+  
+  .footer-sitemap ul {
+    width: auto;
+    
+  }

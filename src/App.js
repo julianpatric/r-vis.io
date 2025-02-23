@@ -1,23 +1,26 @@
 import './App.css';
-import Topbar from './components/Topbar.jsx'
-import ServiceItem from './components/ServiceItem.jsx'
-import { SERVICES } from './data.js';
-
+import logo from './assets/icons/logo.svg'
 
 function App() {
   return (
     <>
-      <div className="header">
-        <Topbar/>
-        <div className="section hero"></div>
-      </div>
-      <div className="section feature">
-        <h1>Architecture seen, felt, remembered.</h1>
-          <ul className="services">
-            {SERVICES.map((service) => (
-              <ServiceItem key={service.title} {...service} />
-            ))}
-          </ul>
+      <div className="container">
+        <div className="header-section">
+            <img className="logo" src={logo}/>
+        </div>
+        <div className="main-section">
+            <div className="box">
+                <h1>COMING SOON</h1>
+                <p>This website is currently under construction.</p>
+            </div>
+            
+        </div>
+        <div className="footer-section">
+            <div className="box">
+                <p>Work with us:</p>
+                <a className ="email" href="mailto:hello@r-vis.io">hello@r-vis.io</a>
+            </div>
+        </div>
       </div>
     </>
   );

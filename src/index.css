@@ -1,93 +1,98 @@
-:root {
-  --primary-color: #09393D;
-  --bg-color: #F1F1F1;
-}
-
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   src: url('./assets/fonts/SpaceGrotesk-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
+
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: "Space Grotesk";
   src: url('./assets/fonts/SpaceGrotesk-Bold.ttf');
   font-weight: bold;
   font-style: normal;
 }
 
-h1 {
-  font-size: 6rem;
-  line-height: 5.4rem;
-  margin: 0;
-  width: 100%;
+:root {
+  --brand: #09393d;
 }
 
-h2 {
-  font-size: 2rem;
-  margin: 0;
-}
 
-html, body {
-  margin: 0;
-  font-family: 'Space Grotesk';
-  font-weight: normal;
-  color: var(--primary-color);
-  max-width: 100vw;
-  background: var(--bg-color);
-  letter-spacing: -6%;
-}
-
-ul {
-  list-style: none;
+body {
+  font-family: "Space Grotesk";
+  height: 100vh;
+  margin: 0px;
   padding: 0px;
+  color: var(--brand);
+  background-image: url("assets/bg-wireframe.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+  text-align: center;
 }
 
-.section {
-  width: calc(100% - 40px); /* body width - left and right margin */
-  margin: 0 20px;
-  display: flex;
-}
-
-.topBar {
-  height: 80px;
+.container {
+  max-width: 800px;
+  min-width: 400px;
   display: flex;
   align-items: center;
-  gap: 35px;
-}
-
-.topBar .logo {
-  height: 32px;
-}
-
-.navBar {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-}
-
-.header {
-  height: 100vh;
-  width: 100%;
-}
-
-.hero {
-  background-color: lightgrey;
-  height: calc(100% - 80px - 20px);
-}
-
-.feature {
-  text-align: center;
-  margin: 140px 0;
-  display: flex;
+  justify-content: center;
   flex-direction: column;
+  gap: auto;
+  margin: auto;
+  height: 100vh;
 }
 
-.services {
-  max-width: 100%;
-  padding: 40px 80px;
-  gap: 20px;
+.header-section {
+  height: 35%;
+  position: relative;
+  top: 0%;
+  margin: 0 30px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.main-section {
+  height: 27%;
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.footer-section {
+  height: 38%;
+  position: relative;
+  bottom: 0%;
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 4.3rem;
+  margin: 30px;
+}
+
+.logo {
+  width: 90px;
+}
+
+.email {
+  color: #41b55a;
+  line-height: 1.6rem;
+  font-size: 2rem;  
+  text-decoration: none;
+  border-bottom: 0px solid var(--brand);
+  transition: 200ms;
+  margin: 20px 0;
+}
+
+
+.email:hover {
+  color: var(--brand);
+  border-bottom: 3px solid var(--brand);
+  
+}

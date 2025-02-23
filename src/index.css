@@ -1,0 +1,93 @@
+:root {
+  --primary-color: #09393D;
+  --bg-color: #F1F1F1;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/fonts/SpaceGrotesk-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./assets/fonts/SpaceGrotesk-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.4rem;
+  margin: 0;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  font-family: 'Space Grotesk';
+  font-weight: normal;
+  color: var(--primary-color);
+  max-width: 100vw;
+  background: var(--bg-color);
+  letter-spacing: -6%;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.section {
+  width: calc(100% - 40px); /* body width - left and right margin */
+  margin: 0 20px;
+  display: flex;
+}
+
+.topBar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.topBar .logo {
+  height: 32px;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+}
+
+.hero {
+  background-color: lightgrey;
+  height: calc(100% - 80px - 20px);
+}
+
+.feature {
+  text-align: center;
+  margin: 140px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.services {
+  max-width: 100%;
+  padding: 40px 80px;
+  gap: 20px;
+  display: flex;
+}
+

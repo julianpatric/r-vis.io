@@ -1,5 +1,5 @@
 import './App.css';
-import Topbar from './components/Topbar.jsx'
+import Navbar from './components/Navbar.jsx'
 import ServiceItem from './components/ServiceItem.jsx'
 import Footer from './components/Footer.jsx'
 import { CONTENT_ITEMS, SERVICES } from './data.js';
@@ -9,10 +9,11 @@ import { CONTENT_ITEMS, SERVICES } from './data.js';
 function App() {
   return (
     <>
-      <div className="header">
-        <Topbar/>
-        <div className="hero-section"> </div>
+      <div className="hero-section">
+        <div className="hero-img"> </div>
+        
       </div>
+      <Navbar/>
       <div className="feature-section">
         <div className='container'>
           <h1>Architecture seen, felt, remembered.</h1>

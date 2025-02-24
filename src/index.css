@@ -67,40 +67,40 @@ ul {
   margin: auto;
 }
 
-.topBar {
+.navbar {
   height: 80px;
   display: flex;
   align-items: center;
   gap: 35px;
+  justify-content: space-between;
+  background-color: var(--almost-white);
+  position: relative;
+  padding: 0 20px;
 }
 
-.navBar {
+.nav {
   display: flex;
   flex-direction: row;
   gap: 25px;
 }
 
-.header {
+.hero-section {
   height: 100vh;
   width: calc(100% - 40px); /* body width - left and right margin */
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
   position:sticky;
   position:-webkit-sticky;
   top: 0;
   z-index: -2;
-  background-color: var(--almost-white);
+  background-color: var(--almost-white);  
+  margin-bottom: -100px;
 }
 
-.hero-section {
+.hero-img {
   background: url(./assets/photos/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100% - 80px - 20px);
-}
-
-.hero-section img {
-  width: 100%;
-  object-fit: cover;
+  height: calc(100% - 20px - 80px ); /* hero height - top padding - navbar height */
 }
 
 .feature-section {

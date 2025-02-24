@@ -7,6 +7,7 @@
   border: solid var(--primary-color) 0.5px;
   text-align: left;
   padding: 20px;
+  transition-duration: 300ms;
 }
 
 .service .subcategories {
@@ -17,8 +18,14 @@
 .service:hover {
   background-color: var(--primary-color);
   color: var(--almost-white);
+  transition-duration: 300ms;
+}
+
+.service h2 {
+  transition-duration: 300ms;
 }
 
 .service:hover h2 {
   padding: 10px 0;
+  transition-duration: 300ms;
 }

@@ -12,6 +12,7 @@ function App() {
       </div>
       <Navbar />
       <Feature />
+
       <div className="content-section">
         <div className="container content-grid">
           {CONTENT_ITEMS.map((content, index) => (

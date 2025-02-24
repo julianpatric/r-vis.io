@@ -1,10 +1,8 @@
 import './App.css';
-import Navbar from './components/Navbar.jsx'
-import ServiceItem from './components/ServiceItem.jsx'
-import Footer from './components/Footer.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
+import ServiceItem from './components/ServiceItem/ServiceItem.jsx'
+import Footer from './components/Footer/Footer.jsx'
 import { CONTENT_ITEMS, SERVICES } from './data.js';
-
-
 
 function App() {
   return (

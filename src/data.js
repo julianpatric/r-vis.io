@@ -6,15 +6,15 @@ import throughhouse4 from "./assets/photos/R-VIS_PHOTOGRAPHY_027.jpg";
 export const SERVICES = [
   {
     title: 'Photography & Film', 
-    subcategories: ['Architectural Documentation', 'Video Feature', 'Walkthrough Video']
+    subcategories: ['Architectural documentation', 'Video feature', 'Walkthrough video']
   },
   {
     title: 'Visualization', 
-    subcategories: ['Architectural Visualization', 'Video Renders', 'Animation']
+    subcategories: ['Architectural visualization', 'Video renders', 'Animation']
   },
   {
     title: 'Graphic Design', 
-    subcategories: ['Project Presentation', 'Architectural Boards', 'Project Branding']
+    subcategories: ['Project presentation', 'Architectural boards', 'Project branding']
   },
 ]
 

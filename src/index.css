@@ -67,23 +67,6 @@ ul {
   margin: auto;
 }
 
-.navbar {
-  height: 80px;
-  display: flex;
-  align-items: center;
-  gap: 35px;
-  justify-content: space-between;
-  background-color: var(--almost-white);
-  position: relative;
-  padding: 0 20px;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-}
-
 .hero-section {
   height: 100vh;
   width: calc(100% - 40px); /* body width - left and right margin */

@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar.jsx'
-import ServiceItem from './components/ServiceItem/ServiceItem.jsx'
+import Feature from './components/Feature/Feature.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import { CONTENT_ITEMS, SERVICES } from './data.js';
 
@@ -12,16 +12,7 @@ function App() {
         
       </div>
       <Navbar/>
-      <div className="feature-section">
-        <div className='container'>
-          <h1>Architecture seen, felt, remembered.</h1>
-          <ul className="services">
-            {SERVICES.map((service) => (
-              <ServiceItem key={service.title} {...service} />
-            ))}
-          </ul>
-        </div>
-      </div>
+      <Feature/>
       <div className="content-section">
         <div className='container content-grid'>
           {CONTENT_ITEMS.map((content,index) => (

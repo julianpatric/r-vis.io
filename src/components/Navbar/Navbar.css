@@ -1,0 +1,35 @@
+.navbar {
+    height: 80px;
+    background-color: var(--almost-white);
+    position: relative;
+    transition: all 0.3s ease;
+    width: 100%;
+    
+  }
+
+  .navbar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 20px;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .filler {
+    height: 80px;
+  }

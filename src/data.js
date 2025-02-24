@@ -1,7 +1,7 @@
 import throughhouse1 from "./assets/photos/R-VIS_PHOTOGRAPHY_021.jpg";
 import throughhouse2 from "./assets/photos/R-VIS_PHOTOGRAPHY_013.jpg";
 import throughhouse3 from "./assets/photos/R-VIS_PHOTOGRAPHY_026.jpg";
-import throughhouse4 from "./assets/photos/R-VIS_PHOTOGRAPHY_027.jpg";
+import throughhouse4 from "./assets/photos/R-VIS_PHOTOGRAPHY_027.jpg"; 
 
 export const SERVICES = [
   {

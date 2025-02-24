@@ -1,35 +1,36 @@
 .navbar {
-    height: 80px;
-    background-color: var(--almost-white);
-    position: relative;
-    transition: all 0.3s ease;
-    width: 100%;
-    
-  }
+  height: 80px;
+  background-color: var(--almost-white);
+  position: relative;
+  width: 100%;
+}
 
-  .navbar-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-    justify-content: space-between;
-    height: 100%;
-    margin: 0 20px;
-  }
-  
-  .nav {
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-  }
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 20px;
+}
 
-  .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transition: all 0.3s ease;
-  }
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
 
-  .filler {
-    height: 80px;
-  }
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.filler {
+  height: 80px;
+}
+
+.navbar a {
+  transition-duration: 100ms;
+}

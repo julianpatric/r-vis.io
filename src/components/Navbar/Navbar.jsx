@@ -1,6 +1,7 @@
-import logo from '../../assets/icons/logo.svg'
-import './Navbar.css'
-import { useState, useEffect, useRef } from 'react';
+import logo from "../../assets/icons/logo.svg";
+import "./Navbar.css";
+import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -23,26 +24,32 @@ const Navbar = () => {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [navbarOffset]);
-  
-    return (
+
+  return (
     <>
-      <div ref={navbarRef} className={isSticky ? 'navbar sticky' : 'navbar'}>
+      <div ref={navbarRef} className={isSticky ? "navbar sticky" : "navbar"}>
         <div className="navbar-wrapper">
-          <img src={logo} alt="Logo" height="32px"/>
+          <img src={logo} alt="Logo" height="32px" />
           <ul className="nav">
-            <li><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
+            <li>
+              <a href="#">home</a>
+            </li>
+            <li>
+              <a href="/about.js">about</a>
+            </li>
+            <li>
+              <a href="#">contact</a>
+            </li>
           </ul>
         </div>
       </div>
 
-      <div className={isSticky ? 'filler' : null }/>
+      <div className={isSticky ? "filler" : null} />
     </>
-    )
-}
+  );
+};
 
 export default Navbar;

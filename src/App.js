@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar.jsx'
 import Feature from './components/Feature/Feature.jsx'
 import Footer from './components/Footer/Footer.jsx'
-import { CONTENT_ITEMS, SERVICES } from './data.js';
+import { CONTENT_ITEMS } from './data.js';
 
 function App() {
   return (

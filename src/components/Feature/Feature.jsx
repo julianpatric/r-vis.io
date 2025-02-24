@@ -1,5 +1,6 @@
 import './Feature.css';
-import ServiceItem from '../ServiceItem/ServiceItem.jsx'
+import ServiceItem from './ServiceItem.jsx'
+import { SERVICES } from '../../data.js';
 
 export default function Feature(){
     return (
@@ -8,7 +9,7 @@ export default function Feature(){
             <h1>Architecture seen, felt, remembered.</h1>
             <ul className="services">
                 {SERVICES.map((service) => (
-                <ServiceItem key={service.title} {...service} />
+                <ServiceItem key={service.title} link={service.link}{...service} />
                 ))}
             </ul>
             </div>

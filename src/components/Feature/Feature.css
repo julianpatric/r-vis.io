@@ -1,0 +1,15 @@
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 430px;
+    width: 100%;
+    border: solid var(--primary-color) 0.5px;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .service .subcategories {
+    position: relative;
+    bottom: 0px;
+  }

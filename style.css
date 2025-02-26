@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Space Grotesk";
+    src: url('fonts/SpaceGrotesk-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url('fonts/SpaceGrotesk-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+:root {
+    --brand: #09393d;
+  }
+
+
+body {
+    font-family: "Space Grotesk";
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    color: var(--brand);
+    background-image: url("assets/bg-wireframe.svg");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    min-width: 400px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-section {
+    height: 35%;
+    position: relative;
+    top: 0%;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section {
+    height: 27%;
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+}
+
+.footer-section {
+    height: 38%;
+    position: relative;
+    bottom: 0%;
+    margin: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 100%;
+    display: table-cell;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 4.3rem;
+    margin: 0px;
+}
+
+.logo {
+    width: 90px;
+}
+
+.email {
+    color: #41b55a;
+    line-height: 1.6rem;
+    font-size: 2rem;  
+    text-decoration: none;
+    border-bottom: 0px solid var(--brand);
+    transition: 200ms;
+    margin: 20px 0;
+}
+
+
+.email:hover {
+    color: var(--brand);
+    border-bottom: 3px solid var(--brand);
+    
+}

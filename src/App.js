@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar.jsx";
 import Feature from "./components/Feature/Feature.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import { CONTENT_ITEMS } from "./data.js";
+import Projects from "./Projects.js";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </div>
       <Navbar />
       <Feature />
+      <Projects />
       <div className="content-section">
         <div className="container content-grid">
           {CONTENT_ITEMS.map((content, index) => (

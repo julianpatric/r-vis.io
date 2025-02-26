@@ -11,7 +11,6 @@ export function Home() {
       <Hero />
       <Navbar />
       <Feature />
-      <Projects />
       <div className="content-section">
         <div className="container content-grid">
           {CONTENT_ITEMS.map((content, index) => (

@@ -35,13 +35,13 @@ const Navbar = () => {
           <img src={logo} alt="Logo" height="32px" />
           <ul className="nav">
             <li>
-              <a href="#">home</a>
+              <Link to="/">home</Link>
             </li>
             <li>
-              <a href="/about.js">about</a>
+              <Link to="/about">about</Link>
             </li>
             <li>
-              <a href="#">contact</a>
+              <Link to="/contact">contact</Link>
             </li>
           </ul>
         </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import client from "./sanity/cdclient";
+import client from "./sanity/client";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);

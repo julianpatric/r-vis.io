@@ -6,7 +6,6 @@ export default function Hero() {
       <div className="hero-section">
         <div className="hero-img"> </div>
       </div>
-      ;
     </>
   );
 }

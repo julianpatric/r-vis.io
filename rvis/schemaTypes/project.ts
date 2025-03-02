@@ -1,42 +1,92 @@
-export default {
+import {defineField, defineType} from 'sanity'
+
+export default defineType({
   name: 'project',
   title: 'Project',
   type: 'document',
   fields: [
-    {
+    defineField({
       name: 'title',
       title: 'Project Title',
       type: 'string',
-      validation: (Rule) => Rule.required(),
-    },
-    {
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+    }),
+    defineField({
       name: 'client',
       title: 'Client Name',
       type: 'string',
-    },
-    {
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
-      type: 'text',
-    },
-    {
-      name: 'location',
-      title: 'Location',
-      type: 'string',
-    },
-    {
-      name: 'year',
-      title: 'Year',
-      type: 'string',
-    },
-    {
-      name: 'photos',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'coverPhoto',
+      title: 'Cover Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'images',
       title: 'Photos',
       type: 'array',
-      of: [{type: 'image'}],
+      of: [
+        {
+          name: 'image',
+          type: 'image',
+          title: 'Image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: 'displayType',
+              type: 'string',
+              title: 'Display Type',
+              description: 'How should we display this image?',
+              options: {
+                list: [
+                  {title: 'Full-row image', value: 'full-row'},
+                  {title: 'Two-column image', value: 'two-column'},
+                  {title: 'Isolated image', value: 'isolate'},
+                ],
+                layout: 'radio',
+              },
+            },
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative text',
+            },
+          ],
+        },
+      ],
       options: {
         layout: 'grid',
       },
-    },
+    }),
   ],
-}
+
+  preview: {
+    select: {
+      title: 'title',
+      author: 'author.name',
+      media: 'mainImage',
+    },
+    prepare(selection) {
+      const {author} = selection
+      return {...selection, subtitle: author && `by ${author}`}
+    },
+  },
+})

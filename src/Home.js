@@ -4,8 +4,24 @@ import Footer from "./components/Footer/Footer.jsx";
 import { CONTENT_ITEMS } from "./data.js";
 import Projects from "./Projects.js";
 import Hero from "./components/Hero/Hero.jsx";
+import { useEffect, useState } from "react";
+import client from "./sanity/client.js";
 
 export function Home() {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "project"]{title, "slug": slug.current}`)
+      .then((data) => {
+        console.log("Fetched posts:", data);
+        setProjects(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching posts:", error);
+      });
+  }, []);
+
   return (
     <>
       <Hero />

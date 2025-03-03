@@ -36,11 +36,11 @@
   transition-duration: 300ms;
 }
 
-.service h2 {
+.service h3 {
   transition-duration: 300ms;
 }
 
-.service:hover h2 {
+.service:hover h3 {
   padding: 10px 0;
   transition-duration: 300ms;
 }

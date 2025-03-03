@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer.jsx";
 import Hero from "../components/Hero/Hero.jsx";
 import { useEffect, useState } from "react";
 import client from "../sanity/client.js";
+import { motion } from "motion/react";
 
 export function Home() {
   const [projects, setProjects] = useState({});
@@ -18,7 +19,7 @@ export function Home() {
             displayType, 
             alt, 
             link, 
-            hoverCaption
+            caption
           }}`
       )
       .then((data) => {
@@ -38,14 +39,22 @@ export function Home() {
       <div className="content-section">
         <div className="container content-grid">
           {projects?.images?.map((item, index) => (
-            <div key={index} className={`homepage-content ${item.displayType}`}>
+            <motion.div
+              initial={{ scale: 0.86 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.2 }}
+              key={index}
+              className={`homepage-content ${item.displayType}`}
+            >
               <a href={`/projects/${item.link}`} className="image-link">
                 <img src={item.url} alt={item.alt} />
+
                 <div class="caption">
-                  <p>{item.hoverCaption}</p>
+                  <p>{item.caption}</p>
                 </div>
               </a>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

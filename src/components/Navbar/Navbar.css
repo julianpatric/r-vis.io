@@ -33,7 +33,7 @@
   height: 80px;
 }
 
-.navbar a:hover {
+.nav a:hover {
   border-bottom: solid var(--primary-color) 2px;
   transition-duration: 200ms;
 }

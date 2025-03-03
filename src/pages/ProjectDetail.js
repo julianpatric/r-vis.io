@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import { motion } from "motion/react";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -36,8 +37,6 @@ const ProjectDetail = () => {
 
   if (!project) return null;
 
-  console.log("Test", project.cover);
-
   return (
     <>
       <Hero image={project.cover} />
@@ -54,9 +53,15 @@ const ProjectDetail = () => {
       <div className="content-section">
         <div className="container content-grid">
           {project.images.map((item, index) => (
-            <div className={`content ${item.displayType}`}>
+            <motion.div
+              initial={{ scale: 0.9 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.2 }}
+              className={`content ${item.displayType}`}
+            >
               <img key={index} src={item.url} />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

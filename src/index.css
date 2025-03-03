@@ -130,7 +130,8 @@ ul {
 .two-column {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  width: 100%;
+  align-items: flex-start;
 }
 
 .two-column img {

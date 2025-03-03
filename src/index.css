@@ -55,6 +55,11 @@ a:hover {
   transition-duration: 300ms;
 }
 
+.image-link:hover {
+  /* overrides a:hover style */
+  border-bottom: none;
+}
+
 html,
 body {
   margin: 0;

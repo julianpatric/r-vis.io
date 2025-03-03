@@ -32,7 +32,9 @@ const Navbar = () => {
     <>
       <div ref={navbarRef} className={isSticky ? "navbar sticky" : "navbar"}>
         <div className="navbar-wrapper">
-          <img src={logo} alt="Logo" height="32px" />
+          <Link to="/" className="image-link">
+            <img src={logo} alt="r—vis logo" height="32px" />
+          </Link>
           <ul className="nav">
             <li>
               <Link to="/">home</Link>

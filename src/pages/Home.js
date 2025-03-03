@@ -1,11 +1,10 @@
-import Navbar from "./components/Navbar/Navbar.jsx";
-import Feature from "./components/Feature/Feature.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-import { CONTENT_ITEMS } from "./data.js";
-import Projects from "./Projects.js";
-import Hero from "./components/Hero/Hero.jsx";
+import Navbar from "../components/Navbar/Navbar.jsx";
+import Feature from "../components/Feature/Feature.jsx";
+import Footer from "../components/Footer/Footer.jsx";
+import { CONTENT_ITEMS } from "../data.js";
+import Hero from "../components/Hero/Hero.jsx";
 import { useEffect, useState } from "react";
-import client from "./sanity/client.js";
+import client from "../sanity/client.js";
 
 export function Home() {
   const [projects, setProjects] = useState([]);

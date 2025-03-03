@@ -1,10 +1,9 @@
-import client from "../../sanity/client";
+import client from "../sanity/client";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./ProjectDetail.css";
-import Hero from "../Hero/Hero";
-import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer/Footer";
+import Hero from "../components/Hero/Hero";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -43,7 +42,7 @@ const ProjectDetail = () => {
     <>
       <Hero image={project.cover} />
       <Navbar />
-      <div className="info-section">
+      <div className="header-section">
         <div className="container">
           <div className="title">
             <p>{project.client}</p>

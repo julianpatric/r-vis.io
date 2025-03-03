@@ -83,6 +83,31 @@ ul {
   align-items: center;
 }
 
+.header-section {
+  padding: 100px 20px;
+  background-color: var(--almost-white);
+}
+
+.header-section > .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: left;
+  width: auto;
+}
+
+.title > p {
+  text-transform: uppercase;
+}
+
+.description {
+  width: 40%;
+  justify-content: baseline;
+  white-space: pre-line;
+}
+
 .content-section {
   background-color: var(--almost-white);
   padding: 40px 0;

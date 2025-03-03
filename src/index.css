@@ -90,6 +90,10 @@ ul {
   width: 100%;
 }
 
+.full-row img {
+  width: 100%;
+}
+
 .two-column {
   display: flex;
   justify-content: space-between;
@@ -102,7 +106,17 @@ ul {
   object-fit: cover;
 }
 
-.content img {
+.isolate {
+  grid-column: span 2; /* spans both columns */
   width: 100%;
+  padding: 200px 0;
+  text-align: center;
+}
+
+.isolate img {
+  width: 60%;
+}
+
+.content img {
   object-fit: cover;
 }

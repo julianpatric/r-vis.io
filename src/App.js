@@ -1,9 +1,9 @@
 import About from "./About";
 import "./App.css";
-import ProjectDetail from "./components/ProjectDetail";
+import ProjectDetail from "./components/ProjectDetail/ProjectDetail";
 import Contact from "./Contact";
 import { Home } from "./Home";
-import { HashRouter, Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (

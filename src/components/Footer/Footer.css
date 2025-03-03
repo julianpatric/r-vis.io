@@ -19,6 +19,13 @@
   font-size: 2.4rem;
   line-height: 0rem;
   font-weight: bold;
+  border-bottom: solid transparent 3px;
+  transition-duration: 300ms;
+}
+
+.footer-email a:hover {
+  border-bottom: solid var(--almost-white) 2px;
+  transition-duration: 300ms;
 }
 
 .footer-sitemap {
@@ -29,6 +36,12 @@
 
 .footer-sitemap a {
   color: var(--light-gray);
+  transition-duration: 300ms;
+}
+
+.footer-sitemap a:hover {
+  color: var(--almost-white);
+  transition-duration: 300ms;
 }
 
 .footer-sitemap ul {

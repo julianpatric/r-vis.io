@@ -4,6 +4,7 @@
   position: relative;
   width: 100%;
   transition-duration: 500ms;
+  z-index: 99;
 }
 
 .navbar-wrapper {
@@ -32,8 +33,9 @@
   height: 80px;
 }
 
-.navbar a {
-  transition-duration: 100ms;
+.navbar a:hover {
+  border-bottom: solid var(--primary-color) 2px;
+  transition-duration: 200ms;
 }
 
 .navbar .active {

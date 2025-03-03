@@ -22,6 +22,7 @@ export function Home() {
           }}`
       )
       .then((data) => {
+        console.log("Fetched data: ", data);
         setProjects(data);
       })
       .catch((error) => {
@@ -37,8 +38,13 @@ export function Home() {
       <div className="content-section">
         <div className="container content-grid">
           {projects?.images?.map((item, index) => (
-            <div key={index} className={item.displayType}>
-              <img src={item.url} alt={item.alt}></img>
+            <div key={index} className={`homepage-content ${item.displayType}`}>
+              <a href={`/projects/${item.link}`} className="image-link">
+                <img src={item.url} alt={item.alt} />
+                <div class="caption">
+                  <p>{item.hoverCaption}</p>
+                </div>
+              </a>
             </div>
           ))}
         </div>

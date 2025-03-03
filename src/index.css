@@ -1,7 +1,17 @@
 :root {
-  --primary-color: #09393d;
+  --primary-color: #092b33;
   --almost-white: #f1f1f1;
   --light-gray: #dadcdd;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Space Grotesk";
+  font-weight: normal;
+  color: var(--primary-color);
+  max-width: 100vw;
+  letter-spacing: -0.05rem;
 }
 
 @font-face {
@@ -47,27 +57,11 @@ h4 {
 a {
   color: inherit;
   text-decoration: none;
-  transition-duration: 300ms;
-}
-
-a:hover {
-  border-bottom: solid 2px;
-  transition-duration: 300ms;
 }
 
 .image-link:hover {
   /* overrides a:hover style */
   border-bottom: none;
-}
-
-html,
-body {
-  margin: 0;
-  font-family: "Space Grotesk";
-  font-weight: normal;
-  color: var(--primary-color);
-  max-width: 100vw;
-  letter-spacing: -0.05rem;
 }
 
 ul {
@@ -158,4 +152,35 @@ ul {
 
 .content img {
   object-fit: cover;
+}
+
+.homepage-content {
+  position: relative;
+  transition-duration: 500ms;
+}
+
+.homepage-content .caption {
+  text-align: right;
+  position: absolute;
+  bottom: 5px;
+  color: var(--almost-white);
+  font-size: 0.8rem;
+  height: 60px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.caption p {
+  margin-right: 20px;
+  margin-left: auto;
+}
+.homepage-content:hover {
+  opacity: 80%;
+  transition-duration: 500ms;
 }

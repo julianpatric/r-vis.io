@@ -69,6 +69,16 @@ export default defineType({
               type: 'string',
               title: 'Alternative text',
             },
+            {
+              name: 'hoverCaption',
+              type: 'string',
+              title: 'Hover Caption',
+            },
+            {
+              name: 'link',
+              type: 'string',
+              title: 'Links to',
+            },
           ],
         },
       ],

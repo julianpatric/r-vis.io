@@ -28,22 +28,36 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navbarOffset]);
 
+  const currentPath = window.location.pathname;
+
   return (
     <>
       <div ref={navbarRef} className={isSticky ? "navbar sticky" : "navbar"}>
         <div className="navbar-wrapper">
-          <Link to="/" className="image-link">
+          <a href="/" className="image-link">
             <img src={logo} alt="r—vis logo" height="32px" />
-          </Link>
+          </a>
           <ul className="nav">
             <li>
-              <Link to="/">home</Link>
+              <a href="/" className={currentPath === "/" ? "active" : ""}>
+                home
+              </a>
             </li>
             <li>
-              <Link to="/about">about</Link>
+              <a
+                href="/about"
+                className={currentPath === "about" ? "active" : ""}
+              >
+                about
+              </a>
             </li>
             <li>
-              <Link to="/contact">contact</Link>
+              <a
+                href="/contact"
+                className={currentPath === "/about" ? "active" : ""}
+              >
+                contact
+              </a>
             </li>
           </ul>
         </div>

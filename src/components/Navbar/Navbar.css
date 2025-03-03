@@ -35,3 +35,7 @@
 .navbar a {
   transition-duration: 100ms;
 }
+
+.navbar .active {
+  font-weight: bold;
+}

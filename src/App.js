@@ -4,6 +4,7 @@ import ProjectDetail from "./components/ProjectDetail/ProjectDetail";
 import Contact from "./Contact";
 import { Home } from "./Home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="projects/:slug" element={<ProjectDetail />} />
         </Routes>
       </BrowserRouter>
+      <SpeedInsights />
     </>
   );
 }

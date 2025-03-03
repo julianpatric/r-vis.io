@@ -35,7 +35,7 @@ const ProjectDetail = () => {
     }
   }, [slug]);
 
-  if (!project) return <p>Loading...</p>;
+  if (!project) return null;
 
   console.log("Test", project.cover);
 

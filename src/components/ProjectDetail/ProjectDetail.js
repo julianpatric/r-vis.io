@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./ProjectDetail.css";
 import Hero from "../Hero/Hero";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -14,6 +16,9 @@ const ProjectDetail = () => {
         .fetch(
           `*[_type == "project" && slug.current == $slug][0]{
               title,
+              client,
+              description,
+              "cover": coverPhoto.asset->url,
               "images": images[]{
                 "url": asset->url,
                 displayType
@@ -23,7 +28,7 @@ const ProjectDetail = () => {
           { slug }
         )
         .then((data) => {
-          console.log("Fetched project:", data);
+          //console.log("Fetched project:", data);
           setProject(data);
         })
         .catch(console.error);
@@ -32,31 +37,32 @@ const ProjectDetail = () => {
 
   if (!project) return <p>Loading...</p>;
 
-  const getImageStyle = (displayType) => {
-    switch (displayType) {
-      case "full-row":
-        return { width: "100%", height: "auto" };
-      case "two-column":
-        return { width: "48%", height: "auto" };
-      case "isolate":
-        return { width: "300px", height: "auto", margin: "0 auto" };
-      default:
-        return { width: "300px", height: "auto" }; // Fallback style
-    }
-  };
-
-  console.log("Test: ", project.images);
+  console.log("Test", project.cover);
 
   return (
-    <div className="content-section">
-      <div className="container content-grid">
-        {project.images.map((item, index) => (
-          <div className={`content ${item.displayType}`}>
-            <img key={index} src={item.url} />
+    <>
+      <Hero image={project.cover} />
+      <Navbar />
+      <div className="info-section">
+        <div className="container">
+          <div className="title">
+            <p>{project.client}</p>
+            <h2>{project.title}</h2>
           </div>
-        ))}
+          <p className="description">{project.description}</p>
+        </div>
       </div>
-    </div>
+      <div className="content-section">
+        <div className="container content-grid">
+          {project.images.map((item, index) => (
+            <div className={`content ${item.displayType}`}>
+              <img key={index} src={item.url} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 

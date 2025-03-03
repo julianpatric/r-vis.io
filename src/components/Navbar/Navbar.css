@@ -3,6 +3,7 @@
   background-color: var(--almost-white);
   position: relative;
   width: 100%;
+  transition-duration: 500ms;
 }
 
 .navbar-wrapper {
@@ -24,7 +25,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  transition-duration: 500ms;
 }
 
 .filler {

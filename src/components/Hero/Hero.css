@@ -11,9 +11,10 @@
 }
 
 .hero-img {
-  background: url(../../assets/photos/hero.jpg);
+  /*background: url(../../assets/photos/hero.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: calc(
     100% - 20px - 80px
   ); /* hero height - top padding - navbar height */

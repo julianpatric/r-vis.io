@@ -1,0 +1,25 @@
+.info-section {
+  padding: 100px 20px;
+  background-color: var(--almost-white);
+}
+
+.info-section > .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: left;
+  width: auto;
+  text-transform: lowercase;
+}
+
+.title > p {
+  text-transform: uppercase;
+}
+
+.description {
+  width: 40%;
+  justify-content: baseline;
+  white-space: pre-line;
+}

@@ -5,7 +5,7 @@ import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { motion } from "motion/react";
-
+import CTA from "../components/CTA/CTA";
 const ProjectDetail = () => {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
@@ -41,16 +41,17 @@ const ProjectDetail = () => {
     <>
       <Hero image={project.cover} />
       <Navbar />
-      <div className="header-section">
-        <div className="container">
-          <div className="title">
-            <p>{project.client}</p>
-            <h2>{project.title}</h2>
-          </div>
-          <p className="description">{project.description}</p>
-        </div>
-      </div>
       <div className="content-section">
+        <div className="header-section">
+          <div className="container">
+            <div className="title">
+              <p>{project.client}</p>
+              <h2>{project.title}</h2>
+            </div>
+            <p className="description">{project.description}</p>
+          </div>
+        </div>
+
         <div className="container content-grid">
           {project.images.map((item, index) => (
             <motion.div
@@ -64,6 +65,7 @@ const ProjectDetail = () => {
             </motion.div>
           ))}
         </div>
+        <CTA />
       </div>
       <Footer />
     </>

@@ -10,6 +10,7 @@ import Headline from "../components/Headline/Headline";
 import Services from "../components/Services/Services.jsx";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import CTA from "../components/CTA/CTA";
 
 export function Home() {
   const [projects, setProjects] = useState({});
@@ -80,6 +81,7 @@ export function Home() {
             </motion.div>
           ))}
         </div>
+        <CTA />
       </div>
       <Footer />
       <Tooltip isVisible={isHovered} />

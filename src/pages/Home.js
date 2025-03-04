@@ -40,9 +40,9 @@ export function Home() {
         <div className="container content-grid">
           {projects?.images?.map((item, index) => (
             <motion.div
-              initial={{ scale: 0.86 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: false }}
+              initial={{ scale: 1.08, y: 100 }}
+              whileInView={{ scale: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.2 }}
               key={index}
               className={`homepage-content ${item.displayType}`}

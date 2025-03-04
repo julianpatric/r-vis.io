@@ -183,10 +183,27 @@ ul {
   width: 100%;
   height: 900px;
   cursor: pointer;
+  transition: background-size 0.3s ease-in-out;
 }
 
 .homepage-content:hover {
-  opacity: 0.8;
+  background-size: 110%;
+}
+
+.content-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-image:hover {
+  transform: scale(1.05);
 }
 
 .homepage-content .caption {
@@ -204,20 +221,13 @@ ul {
   width: 100%;
   display: flex;
   align-items: center;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .caption p {
   margin-right: var(--spacing-sm);
   margin-left: auto;
-}
-
-.homepage-content img {
-  transition-duration: var(--transition-fast);
-  will-change: opacity;
-}
-
-.homepage-content img:hover {
-  opacity: 0.8;
 }
 
 /* Font Faces */

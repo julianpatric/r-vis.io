@@ -9,6 +9,7 @@ import useHover from "../components/Tooltip/useHover";
 import Headline from "../components/Headline/Headline";
 import Services from "../components/Services/Services.jsx";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 export function Home() {
   const [projects, setProjects] = useState({});
@@ -64,14 +65,17 @@ export function Home() {
               transition={{ duration: 0.2 }}
               key={index}
               className={`homepage-content ${item.displayType}`}
-              style={{ backgroundImage: `url(${item.url})` }}
-              onClick={() => (window.location.href = `/projects/${item.link}`)}
               {...hoverProps}
             >
-              <div>
-                <div className="caption">
-                  <p>{item.caption}</p>
-                </div>
+              <Link to={`/projects/${item.link}`}>
+                <motion.div
+                  className="content-image"
+                  style={{ backgroundImage: `url(${item.url})` }}
+                />
+              </Link>
+
+              <div className="caption">
+                <p>{item.caption}</p>
               </div>
             </motion.div>
           ))}

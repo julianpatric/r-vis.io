@@ -57,8 +57,13 @@ export default function Feature() {
         </div>
 
         <ul className="services">
-          {SERVICES.map((service) => (
-            <ServiceItem key={service.title} link={service.link} {...service} />
+          {SERVICES.map((service, index) => (
+            <ServiceItem
+              key={service.title}
+              link={service.link}
+              index={index}
+              {...service}
+            />
           ))}
         </ul>
       </div>

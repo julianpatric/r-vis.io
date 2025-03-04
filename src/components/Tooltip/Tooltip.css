@@ -1,0 +1,19 @@
+.tooltip-container {
+  position: fixed;
+  background-color: var(--primary-color);
+  color: var(--almost-white);
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tooltip-container.visible {
+  opacity: 1;
+}

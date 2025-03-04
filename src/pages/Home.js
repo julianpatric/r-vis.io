@@ -6,12 +6,15 @@ import { useEffect, useState } from "react";
 import client from "../sanity/client.js";
 import { useScroll } from "motion/react";
 import { Link } from "react-router-dom";
+import Tooltip from "../components/Tooltip/Tooltip";
+import useHover from "../components/Tooltip/useHover";
 
 export function Home() {
   const [projects, setProjects] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const { scrollYProgress } = useScroll();
+  const { isHovered, hoverProps } = useHover();
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -55,6 +58,7 @@ export function Home() {
             <div
               key={item.link}
               className={`homepage-content ${item.displayType}`}
+              {...hoverProps}
             >
               <Link to={`/projects/${item.link}`} className="image-link">
                 <img src={item.url} alt={item.alt} loading="lazy" />
@@ -67,6 +71,7 @@ export function Home() {
         </div>
       </div>
       <Footer />
+      <Tooltip isVisible={isHovered} />
     </>
   );
 }

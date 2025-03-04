@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import Tooltip from "./components/Tooltip/Tooltip";
 
 function App() {
   useEffect(() => {
@@ -45,6 +46,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <SpeedInsights />
+      <Tooltip />
     </>
   );
 }

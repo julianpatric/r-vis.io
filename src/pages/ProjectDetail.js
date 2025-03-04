@@ -35,7 +35,7 @@ const ProjectDetail = () => {
     }
   }, [slug]);
 
-  if (!project) return <Navigate to="/404" replace />;
+  if (!project) return null;
 
   return (
     <>

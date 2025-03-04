@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar/Navbar.jsx";
-import Feature from "../components/Feature/Feature.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import Hero from "../components/Hero/Hero.jsx";
 import { useEffect, useState } from "react";
@@ -8,6 +7,8 @@ import { useScroll } from "motion/react";
 import { Link } from "react-router-dom";
 import Tooltip from "../components/Tooltip/Tooltip";
 import useHover from "../components/Tooltip/useHover";
+import Headline from "../components/Headline/Headline";
+import Services from "../components/Services/Services.jsx";
 
 export function Home() {
   const [projects, setProjects] = useState({});
@@ -51,7 +52,8 @@ export function Home() {
     <>
       <Hero />
       <Navbar />
-      <Feature />
+      <Headline>Architecture seen, felt, remembered.</Headline>
+      <Services />
       <div className="content-section">
         <div className="container content-grid">
           {projects?.images?.map((item) => (

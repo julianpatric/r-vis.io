@@ -1,4 +1,4 @@
-.feature-section {
+.services-section {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -7,11 +7,13 @@
   background-color: var(--almost-white);
 }
 
-.headline {
-  height: 330px;
-  display: flex;
-  align-items: center;
+.services {
+  max-width: 1200px;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .service {
@@ -19,7 +21,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 430px;
-  width: 100%;
+  width: calc(100% - 40px);
   border: solid var(--primary-color) 0.5px;
   text-align: left;
   padding: 20px;

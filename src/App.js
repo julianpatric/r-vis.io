@@ -1,4 +1,4 @@
-import About from "./About";
+import About from "./pages/About";
 import "./App.css";
 import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./Contact";

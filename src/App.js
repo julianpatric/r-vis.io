@@ -41,8 +41,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="projects/:slug" element={<ProjectDetail />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <SpeedInsights />

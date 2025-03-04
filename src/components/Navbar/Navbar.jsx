@@ -2,6 +2,7 @@ import logo from "../../assets/icons/logo.svg";
 import "./Navbar.css";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { Reveal } from "../Reveal";
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -36,7 +37,6 @@ const Navbar = () => {
         <div className="navbar-wrapper">
           <Link
             to="/"
-            className="image-link"
             onClick={(e) => {
               if (window.location.pathname === "/") {
                 e.preventDefault();
@@ -44,31 +44,35 @@ const Navbar = () => {
               }
             }}
           >
-            <img src={logo} alt="r—vis logo" height="32px" />
+            <Reveal>
+              <img src={logo} alt="r—vis logo" height="32px" />
+            </Reveal>
           </Link>
-          <ul className="nav">
-            <li>
-              <a href="/" className={currentPath === "/" ? "active" : ""}>
-                home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/about"
-                className={currentPath === "about" ? "active" : ""}
-              >
-                about
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contact"
-                className={currentPath === "/about" ? "active" : ""}
-              >
-                contact
-              </a>
-            </li>
-          </ul>
+          <Reveal>
+            <ul className="nav">
+              <li>
+                <a href="/" className={currentPath === "/" ? "active" : ""}>
+                  home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className={currentPath === "/about" ? "active" : ""}
+                >
+                  about
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className={currentPath === "/contact" ? "active" : ""}
+                >
+                  contact
+                </a>
+              </li>
+            </ul>
+          </Reveal>
         </div>
       </div>
 

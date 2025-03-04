@@ -1,5 +1,5 @@
 import client from "../sanity/client";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
@@ -35,7 +35,7 @@ const ProjectDetail = () => {
     }
   }, [slug]);
 
-  if (!project) return null;
+  if (!project) return <Navigate to="/404" replace />;
 
   return (
     <>
@@ -56,7 +56,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ scale: 0.9 }}
               whileInView={{ scale: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.2 }}
               className={`content ${item.displayType}`}
             >

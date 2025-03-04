@@ -40,10 +40,9 @@
 }
 
 .service h3 {
-  transition-duration: 300ms;
+  transition: padding 300ms ease-in-out;
 }
 
 .service:hover h3 {
   padding: 10px 0;
-  transition-duration: 300ms;
 }

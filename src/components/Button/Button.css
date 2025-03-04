@@ -1,0 +1,16 @@
+.button {
+  background-color: var(--primary-color);
+  color: var(--almost-white);
+  padding: 8px 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  border-radius: 3px;
+  transition-duration: 500ms;
+}
+
+.button:hover {
+  gap: 18px;
+  transition-duration: 500ms;
+}

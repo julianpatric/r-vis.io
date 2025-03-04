@@ -34,9 +34,18 @@ const Navbar = () => {
     <>
       <div ref={navbarRef} className={isSticky ? "navbar sticky" : "navbar"}>
         <div className="navbar-wrapper">
-          <a href="/" className="image-link">
+          <Link
+            to="/"
+            className="image-link"
+            onClick={(e) => {
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                window.location.reload();
+              }
+            }}
+          >
             <img src={logo} alt="r—vis logo" height="32px" />
-          </a>
+          </Link>
           <ul className="nav">
             <li>
               <a href="/" className={currentPath === "/" ? "active" : ""}>

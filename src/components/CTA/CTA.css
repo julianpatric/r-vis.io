@@ -1,0 +1,25 @@
+.cta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  flex-direction: column;
+  text-align: center;
+  padding: 180px 0 180px 0;
+  gap: var(--spacing-md);
+  margin: auto;
+}
+
+.cta-container h2 {
+  font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+  /* Tablet */
+}
+@media (max-width: 768px) {
+  /* Mobile */
+  .cta-container {
+    width: 100%;
+  }
+}

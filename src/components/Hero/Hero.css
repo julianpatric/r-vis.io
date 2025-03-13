@@ -19,3 +19,13 @@
     100% - 20px - 80px
   ); /* hero height - top padding - navbar height */
 }
+
+@media (max-width: 1024px) {
+  /* Tablet */
+}
+@media (max-width: 768px) {
+  /* Mobile */
+  .hero-section {
+    height: 80vh;
+  }
+}

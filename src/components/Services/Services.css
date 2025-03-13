@@ -10,8 +10,8 @@
 .services {
   max-width: 1200px;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: row;
   gap: 20px;
   padding: 20px 0;
 }
@@ -45,4 +45,18 @@
 
 .service:hover h3 {
   padding: 10px 0;
+}
+
+@media (max-width: 1024px) {
+  /* Tablet */
+}
+@media (max-width: 768px) {
+  /* Mobile */
+
+  .services {
+    flex-direction: column;
+  }
+  .service {
+    height: 150px;
+  }
 }

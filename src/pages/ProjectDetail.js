@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { motion } from "motion/react";
 import CTA from "../components/CTA/CTA";
+import "../styles/ProjectDetail.css";
+
 const ProjectDetail = () => {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
@@ -23,7 +25,9 @@ const ProjectDetail = () => {
                 "url": asset->url,
                 displayType
               },
-              "slug": slug.current
+              "slug": slug.current,
+              endtag,
+              endtagLink
             }`,
           { slug }
         )
@@ -65,6 +69,18 @@ const ProjectDetail = () => {
             </motion.div>
           ))}
         </div>
+
+        {project.endtagLink && (
+          <div className="endtag">
+            <a
+              href={project.endtagLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.endtag} ↗
+            </a>
+          </div>
+        )}
         <CTA />
       </div>
       <Footer />

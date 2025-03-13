@@ -11,7 +11,7 @@ import Services from "../components/Services/Services.jsx";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import CTA from "../components/CTA/CTA";
-
+import "../styles/ContentGrid.css";
 export function Home() {
   const [projects, setProjects] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -68,12 +68,12 @@ export function Home() {
               className={`homepage-content ${item.displayType}`}
               {...hoverProps}
             >
-              <Link to={`/projects/${item.link}`}>
+              <a href={`/projects/${item.link}`}>
                 <motion.div
                   className="content-image"
                   style={{ backgroundImage: `url(${item.url})` }}
                 />
-              </Link>
+              </a>
 
               <div className="caption">
                 <p>{item.caption}</p>
@@ -81,9 +81,13 @@ export function Home() {
             </motion.div>
           ))}
         </div>
+        <div className="endtag">
+          <a href="/projects">See all our projects</a>
+        </div>
         <CTA />
       </div>
       <Footer />
+
       <Tooltip isVisible={isHovered} />
     </>
   );

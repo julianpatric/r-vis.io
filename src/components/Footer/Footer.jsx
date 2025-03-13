@@ -1,6 +1,7 @@
 import "./Footer.css";
 import logo from "../../assets/icons/logo-white.svg";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,13 +31,13 @@ export default function Footer() {
                 <h4>r—vis</h4>
               </li>
               <li>
-                <a href="#">home</a>
+                <Link to="/">home</Link>
               </li>
               <li>
-                <a href="#">about</a>
+                <Link to="/about">about</Link>
               </li>
               <li>
-                <a href="#">contact</a>
+                <Link to="/contact">contact</Link>
               </li>
             </ul>
             <ul>
@@ -44,13 +45,13 @@ export default function Footer() {
                 <h4>services</h4>
               </li>
               <li>
-                <a href="#">photo & film</a>
+                <Link to="/services/photo-film">photo & film</Link>
               </li>
               <li>
-                <a href="#">visualization</a>
+                <Link to="/services/visualization">visualization</Link>
               </li>
               <li>
-                <a href="#">graphic design</a>
+                <Link to="/services/graphic-design">graphic design</Link>
               </li>
             </ul>
             <ul>
@@ -58,21 +59,21 @@ export default function Footer() {
                 <h4>socials</h4>
               </li>
               <li>
-                <a href="#">instagram</a>
+                <Link to="instagram">instagram</Link>
               </li>
               <li>
-                <a href="#">facebook</a>
+                <Link to="facebook">facebook</Link>
               </li>
               <li>
-                <a href="#">youtube</a>
+                <Link to="/youtube">youtube</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="footer-copyright">
-          <a href="/" className="footer-logo">
+          <Link to="/" className="footer-logo">
             <img src={logo} alt="Logo" height="36px" />
-          </a>
+          </Link>
           <p>©2025 r—vis. All rights reserved.</p>
         </div>
       </div>

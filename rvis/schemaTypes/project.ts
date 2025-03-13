@@ -89,6 +89,19 @@ export default defineType({
         layout: 'grid',
       },
     }),
+    defineField({
+      name: 'endtag',
+      title: 'Endtag',
+      type: 'string',
+      description: 'Text shown at the bottom of the page.',
+    }),
+
+    defineField({
+      name: 'endtagLink',
+      title: 'Endtag Link',
+      type: 'string',
+      description: 'Link for the endtag.',
+    }),
   ],
 
   preview: {

@@ -9,9 +9,9 @@ import useHover from "../components/Tooltip/useHover";
 import Headline from "../components/Headline/Headline";
 import Services from "../components/Services/Services.jsx";
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
 import CTA from "../components/CTA/CTA";
 import "../styles/ContentGrid.css";
+
 export function Home() {
   const [projects, setProjects] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -65,13 +65,14 @@ export function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.2 }}
               key={index}
-              className={`homepage-content ${item.displayType}`}
+              className={`homepage content ${item.displayType}`}
               {...hoverProps}
             >
               <a href={`/projects/${item.link}`}>
-                <motion.div
+                <motion.img
                   className="content-image"
-                  style={{ backgroundImage: `url(${item.url})` }}
+                  src={item.url}
+                  alt={item.caption}
                 />
               </a>
 

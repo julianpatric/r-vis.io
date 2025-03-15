@@ -1,42 +1,39 @@
 /* Homepage Content */
-.homepage-content {
+.content {
   position: relative;
-  transition-duration: var(--transition-normal);
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
-  height: 900px;
+  height: 800px;
+}
+
+.homepage.content {
+  background-color: black; /* black background to neutralize the image with blending mode */
   cursor: pointer;
-  background-color: black;
   transition: background-color 0.3s ease-in-out;
 }
 
 .content-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.homepage.content .content-image {
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out,
     opacity 0.3s ease-in-out;
   mix-blend-mode: screen;
 }
 
-.homepage-content:hover {
+.homepage.content:hover {
   background-color: var(--primary-color);
 }
 
-.homepage-content:hover .content-image {
+.homepage.content:hover .content-image {
   filter: grayscale(100%);
   opacity: 0.8;
 }
 
-.homepage-content .caption {
+.homepage.content .caption {
   text-align: right;
   position: absolute;
   bottom: 0;
@@ -87,10 +84,6 @@
   width: 100%;
 }
 
-.full-row img {
-  width: 100%;
-}
-
 .two-column {
   display: flex;
   justify-content: space-between;
@@ -98,21 +91,18 @@
   align-items: flex-start;
 }
 
-.two-column img {
-  width: 100%;
-  height: 900px;
-  object-fit: cover;
-}
-
 .isolate {
   grid-column: span 2;
   width: 100%;
-  padding: var(--spacing-xl) 0;
+  margin: var(--spacing-xl) 0;
   text-align: center;
 }
 
-.isolate img {
+.isolate .content-image {
   width: 60%;
+  position: relative;
+  object-fit: contain;
+  height: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -120,26 +110,25 @@
 
   .content-grid {
     padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
   }
-
+  .content {
+    height: fit-content;
+  }
   .full-row {
     width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    height: auto;
+    object-fit: contain;
   }
   .two-column {
+    grid-column: span 2;
     width: 100%;
-    aspect-ratio: 9/16;
-    object-fit: cover;
-    height: auto;
+    object-fit: contain;
     gap: 0;
   }
-  .isolate {
-    height: 500px;
-  }
 
-  .homepage-content .caption {
+  .homepage.content .caption {
     height: 40px;
   }
 
@@ -149,4 +138,8 @@
 }
 @media (max-width: 768px) {
   /* Mobile */
+
+  .isolate {
+    margin: var(--spacing-xl) 0;
+  }
 }

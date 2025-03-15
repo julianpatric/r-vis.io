@@ -20,7 +20,21 @@ export const Reveal = ({ children, width = "fit-content" }) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div
+      ref={ref}
+      style={{
+        position: "relative",
+        width,
+        overflowY: "hidden",
+        // Offset values to prevent text from being cut off
+        paddingBottom: "50px",
+        marginBottom: "-50px",
+        paddingRight: "50px",
+        marginRight: "-50px",
+        paddingTop: "5px",
+        marginTop: "-5px",
+      }}
+    >
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },

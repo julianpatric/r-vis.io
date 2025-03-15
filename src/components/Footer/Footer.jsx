@@ -1,24 +1,10 @@
 import "./Footer.css";
 import logo from "../../assets/icons/logo-white.svg";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Show footer after scrolling 120% of the viewport height
-      const scrollThreshold = window.innerHeight * 1.2;
-      setIsVisible(window.scrollY > scrollThreshold);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <div className={`footer-section ${isVisible ? "visible" : ""}`}>
+    <div className="footer-section">
       <div className="footer-container">
         <div className="footer-main">
           <div className="footer-email">

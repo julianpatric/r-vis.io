@@ -97,7 +97,6 @@ ul {
 .content-section {
   background-color: var(--almost-white);
   padding-bottom: 40px;
-  margin-bottom: 90vh;
 }
 
 .header-section {
@@ -140,6 +139,11 @@ ul {
     --spacing-xl: 80px;
   }
   h1 {
+    font-size: 4rem;
+    line-height: 3.3rem;
+  }
+
+  .cta-container h2 {
     font-size: 4rem;
     line-height: 3.3rem;
   }

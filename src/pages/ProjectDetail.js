@@ -7,11 +7,13 @@ import Footer from "../components/Footer/Footer";
 import { motion } from "motion/react";
 import CTA from "../components/CTA/CTA";
 import "../styles/ProjectDetail.css";
+import { useNavigate } from "react-router-dom";
+import { Reveal } from "../components/Reveal";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (slug) {
       client
@@ -33,7 +35,11 @@ const ProjectDetail = () => {
         )
         .then((data) => {
           //console.log("Fetched project:", data);
-          setProject(data);
+          if (data) {
+            setProject(data);
+          } else {
+            navigate("/404"); // Redirect to NotFound page
+          }
         })
         .catch(console.error);
     }
@@ -49,8 +55,10 @@ const ProjectDetail = () => {
         <div className="header-section">
           <div className="container">
             <div className="title">
-              <p>{project.client}</p>
-              <h2>{project.title}</h2>
+              <Reveal>
+                <p>{project.client}</p>
+                <h2>{project.title}</h2>
+              </Reveal>
             </div>
             <p className="description">{project.description}</p>
           </div>
@@ -63,9 +71,14 @@ const ProjectDetail = () => {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.2 }}
+              key={index}
               className={`content ${item.displayType}`}
             >
-              <img key={index} src={item.url} />
+              <motion.img
+                className="content-image"
+                src={item.url}
+                alt={item.caption}
+              />
             </motion.div>
           ))}
         </div>

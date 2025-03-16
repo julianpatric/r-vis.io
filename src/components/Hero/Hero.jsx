@@ -2,10 +2,10 @@ import "./Hero.css";
 import defaultImage from "../../assets/photos/hero.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Hero({ image = defaultImage }) {
+export default function Hero({ image = defaultImage, halfHeight = false }) {
   return (
     <AnimatePresence mode="wait">
-      <div className="hero-section">
+      <div className={`hero-section ${halfHeight ? "half-height" : ""}`}>
         <motion.div
           style={{ backgroundImage: `url(${image})` }}
           className="hero-img"

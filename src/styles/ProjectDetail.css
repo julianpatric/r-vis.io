@@ -12,3 +12,13 @@
   justify-content: baseline;
   white-space: pre-line;
 }
+
+.header-section {
+  padding: var(--spacing-md) var(--spacing-sm) var(--spacing-lg)
+    var(--spacing-sm);
+}
+
+.header-section > .container {
+  display: flex;
+  justify-content: space-between;
+}

@@ -3,11 +3,14 @@
   width: calc(100% - 40px); /* body width - left and right margin */
   padding: 20px 20px 0 20px;
   position: sticky;
-  position: -webkit-sticky;
   top: 0;
   z-index: -2;
   background-color: var(--almost-white);
   margin-bottom: -100px;
+}
+
+.hero-section.half-height {
+  height: 70vh;
 }
 
 .hero-img {

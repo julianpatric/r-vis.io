@@ -54,9 +54,10 @@ export function Home() {
     <>
       <Hero />
       <Navbar />
-      <Headline>Architecture seen, felt, remembered.</Headline>
-      <Services />
-      <div className="content-section">
+      <div className="main-section">
+        <Headline>Architecture seen, felt, remembered.</Headline>
+        <Services />
+
         <div className="container content-grid">
           {projects?.images?.map((item, index) => (
             <motion.div

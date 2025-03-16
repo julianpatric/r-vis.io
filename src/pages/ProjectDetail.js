@@ -49,9 +49,9 @@ const ProjectDetail = () => {
 
   return (
     <>
-      <Hero image={project.cover} />
+      <Hero image={project.cover} halfHeight={true} />
       <Navbar />
-      <div className="content-section">
+      <div className="main-section">
         <div className="header-section">
           <div className="container">
             <div className="title">

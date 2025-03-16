@@ -2,13 +2,13 @@ import About from "./pages/About";
 import "./App.css";
 import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./Contact";
+import Test from "./pages/Test";
 import { Home } from "./pages/Home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import Tooltip from "./components/Tooltip/Tooltip";
 
 function App() {
   useEffect(() => {
@@ -42,11 +42,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/test" element={<Test />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <SpeedInsights />
-      <Tooltip />
     </>
   );
 }

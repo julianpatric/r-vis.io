@@ -1,7 +1,7 @@
 .navbar {
   height: 80px;
   background-color: var(--almost-white);
-  position: relative;
+  position: sticky;
   width: 100%;
   transition-duration: 500ms;
   z-index: 99;

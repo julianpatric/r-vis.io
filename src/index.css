@@ -55,6 +55,11 @@ body {
   font-size: 16px;
 }
 
+::selection {
+  background: black;
+  color: var(--almost-white);
+}
+
 /* Typography */
 h1,
 h2 {

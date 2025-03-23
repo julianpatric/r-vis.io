@@ -1,7 +1,7 @@
 import About from "./pages/About";
 import "./App.css";
 import ProjectDetail from "./pages/ProjectDetail";
-import Contact from "./Contact";
+import Contact from "./pages/Contact";
 import Test from "./pages/Test";
 import { Home } from "./pages/Home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";

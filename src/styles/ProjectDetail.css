@@ -3,10 +3,6 @@
   width: 60%;
 }
 
-.title > p {
-  text-transform: uppercase;
-}
-
 .description {
   width: 40%;
   justify-content: baseline;

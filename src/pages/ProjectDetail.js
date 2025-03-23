@@ -54,7 +54,7 @@ const ProjectDetail = () => {
         <div className="header-section">
           <div className="container">
             <div className="title">
-              <p>{project.client}</p>
+              <p className="subtitle">{project.client}</p>
               <h2>{project.title}</h2>
             </div>
             <p className="description">{project.description}</p>

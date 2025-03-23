@@ -5,9 +5,39 @@ import "../components/Footer/Footer";
 import Footer from "../components/Footer/Footer";
 import CTA from "../components/CTA/CTA";
 import Headline from "../components/Headline/Headline";
-import aboutHero from "../assets/photos/about-hero.jpg";
 
 function About() {
+  const scrollToSection = () => {
+    const section = document.getElementById("target-section");
+    if (section) {
+      const offset = 300; // Adjust as needed
+      const targetPosition =
+        section.getBoundingClientRect().top + window.scrollY - offset;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      const duration = 1000; // Slow down by increasing this value (in ms)
+      let startTime = null;
+
+      function animationStep(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1); // Normalize progress
+
+        window.scrollTo(0, startPosition + distance * easeInOutQuad(progress));
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animationStep);
+        }
+      }
+
+      function easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      }
+
+      requestAnimationFrame(animationStep);
+    }
+  };
+
   const TEAM_MEMBERS = [
     {
       name: "Julian Semilla",
@@ -17,17 +47,17 @@ function About() {
       link: "#",
     },
     {
-      name: "Lance Sy",
-      photo: null,
-      title: "2",
-      socials: "@landssea",
-      link: "#",
-    },
-    {
       name: "Kevin Nuñez",
       photo: null,
       title: "3",
       socials: "@kevvnunez",
+      link: "#",
+    },
+    {
+      name: "Lance Sy",
+      photo: null,
+      title: "2",
+      socials: "@landssea",
       link: "#",
     },
   ];
@@ -37,13 +67,33 @@ function About() {
         <div className="sliding-background" />
         <div className="container">
           <Headline>Visual communication for architects.</Headline>
+          <p onClick={scrollToSection}>LEARN MORE</p>
+          <div className="arrow-container">
+            <div className="arrow">
+              <svg
+                width="50"
+                height="80"
+                viewBox="0 0 24 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2V38M12 38L9 34M12 38L15 34"
+                  stroke="currentColor"
+                  stroke-width="0.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
       <Navbar />
       <div className="main-section">
         <div className="container about-body">
           <Reveal>
-            <h3 className="bio">
+            <h3 className="bio" id="target-section">
               <span style={{ "font-weight": "bold" }}>r—vis</span> is a creative
               studio shaping how architecture is seen and remembered. We
               specialize in{" "}

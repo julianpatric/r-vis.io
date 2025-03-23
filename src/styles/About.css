@@ -7,13 +7,32 @@
   }
 }
 
+@keyframes arrow {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+}
+
 .about-hero {
   width: 100%;
   height: 100vh;
   background-color: black;
   overflow: hidden;
   position: relative;
-  z-index: -5;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -24,17 +43,34 @@
   opacity: 0.5;
   height: 100%;
   width: 7740px;
-  animation: slide 45s linear infinite;
+  animation: slide 60s linear infinite;
   position: absolute;
   z-index: -3;
 }
 
 .about-hero .container {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   width: 1200px;
   color: var(--almost-white);
   bottom: 0;
   text-align: center;
+}
+
+.about-hero p {
+  cursor: pointer;
+}
+
+.arrow-container {
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow {
+  position: relative;
+  animation: arrow 5s ease infinite;
+  pointer-events: none;
 }
 
 .about-body {
@@ -58,6 +94,8 @@
 .team img {
   width: 170px;
   margin-bottom: 10px;
+  background-color: var(--light-gray);
+  height: 170px;
 }
 
 .team p {

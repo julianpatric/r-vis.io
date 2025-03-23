@@ -55,10 +55,8 @@ const ProjectDetail = () => {
         <div className="header-section">
           <div className="container">
             <div className="title">
-              <Reveal>
-                <p>{project.client}</p>
-                <h2>{project.title}</h2>
-              </Reveal>
+              <p>{project.client}</p>
+              <h2>{project.title}</h2>
             </div>
             <p className="description">{project.description}</p>
           </div>

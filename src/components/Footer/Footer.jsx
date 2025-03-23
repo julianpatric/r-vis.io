@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="footer-sitemap">
             <ul>
               <li>
-                <h4>r—vis</h4>
+                <li className="sitemap-header">r—vis</li>
               </li>
               <li>
                 <Link to="/">home</Link>
@@ -28,7 +28,7 @@ export default function Footer() {
             </ul>
             <ul>
               <li>
-                <h4>services</h4>
+                <li className="sitemap-header">services</li>
               </li>
               <li>
                 <Link to="/services/photo-film">photo & film</Link>
@@ -42,7 +42,7 @@ export default function Footer() {
             </ul>
             <ul>
               <li>
-                <h4>socials</h4>
+                <li className="sitemap-header">socials</li>
               </li>
               <li>
                 <Link to="instagram">instagram</Link>

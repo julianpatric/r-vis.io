@@ -53,6 +53,10 @@
   line-height: 1.8rem;
 }
 
+.sitemap-header {
+  font-weight: bold;
+}
+
 .footer-sitemap a {
   color: var(--light-gray);
   transition-duration: 300ms;

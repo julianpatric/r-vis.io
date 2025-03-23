@@ -9,6 +9,7 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const navbarRef = useRef(null);
   const [navbarOffset, setNavbarOffset] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setNavbarOffset(navbarRef.current?.offsetTop || 0); // Get navbar's initial position

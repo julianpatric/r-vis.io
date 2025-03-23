@@ -1,5 +1,5 @@
 import client from "../sanity/client";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
@@ -8,7 +8,6 @@ import { motion } from "motion/react";
 import CTA from "../components/CTA/CTA";
 import "../styles/ProjectDetail.css";
 import { useNavigate } from "react-router-dom";
-import { Reveal } from "../components/Reveal";
 
 const ProjectDetail = () => {
   const { slug } = useParams();

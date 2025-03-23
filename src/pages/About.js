@@ -4,6 +4,7 @@ import "../styles/About.css";
 import "../components/Footer/Footer";
 import Footer from "../components/Footer/Footer";
 import CTA from "../components/CTA/CTA";
+import Headline from "../components/Headline/Headline";
 
 function About() {
   const TEAM_MEMBERS = [
@@ -31,18 +32,19 @@ function About() {
   ];
   return (
     <>
-      <Navbar />
       <div className="about-hero">
-        <h1>Visual communication for architects.</h1>
+        <Headline>Visual communication for architects.</Headline>
       </div>
+      <Navbar />
       <div className="main-section">
         <div className="container about-body">
           <Reveal>
             <h3 className="bio">
-              r—vis is a creative studio shaping how architecture is seen and
-              experienced. We specialize in architectural photography and film,
-              visualization, and graphic design crafting compelling visuals that
-              bridge concept and reality.
+              <span style={{ "font-weight": "bold" }}>r—vis</span> is a creative
+              studio shaping how architecture is seen and experienced. We
+              specialize in architectural photography and film, visualization,
+              and graphic design crafting compelling visuals that bridge concept
+              and reality.
             </h3>
           </Reveal>
 

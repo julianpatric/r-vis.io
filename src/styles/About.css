@@ -23,7 +23,7 @@
   background: url("../assets/photos/about-hero.jpg") repeat-x;
   opacity: 0.5;
   height: 100%;
-  width: 300%;
+  width: 7740px;
   animation: slide 45s linear infinite;
   position: absolute;
   z-index: -3;

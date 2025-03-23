@@ -8,6 +8,7 @@
   align-items: center;
   border-radius: 3px;
   transition-duration: 500ms;
+  width: fit-content;
 }
 
 .button:hover {

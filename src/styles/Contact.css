@@ -1,0 +1,17 @@
+.about-container {
+  display: flex;
+  padding-top: 30px;
+}
+.contact-left {
+  width: 40%;
+}
+
+.contact-right {
+  width: 60%;
+}
+
+.about-tip {
+  margin: 0;
+  width: 350px;
+  line-height: 1.34rem;
+}

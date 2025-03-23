@@ -3,6 +3,7 @@ import "./App.css";
 import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./pages/Contact";
 import Test from "./pages/Test";
+import Typography from "./pages/Typography";
 import { Home } from "./pages/Home";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -44,6 +45,7 @@ function App() {
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/test" element={<Test />} />
           <Route path="/*" element={<NotFound />} />
+          <Route path="/type" element={<Typography />} />
         </Routes>
       </BrowserRouter>
       <SpeedInsights />

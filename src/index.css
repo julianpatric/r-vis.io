@@ -94,7 +94,7 @@ p {
   line-height: 1.75;
 }
 
-p.subtitle {
+subtitle {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.025rem;

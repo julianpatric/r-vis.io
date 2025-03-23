@@ -5,6 +5,7 @@ import "../components/Footer/Footer";
 import Footer from "../components/Footer/Footer";
 import CTA from "../components/CTA/CTA";
 import Headline from "../components/Headline/Headline";
+import aboutHero from "../assets/photos/about-hero.jpg";
 
 function About() {
   const TEAM_MEMBERS = [
@@ -33,7 +34,10 @@ function About() {
   return (
     <>
       <div className="about-hero">
-        <Headline>Visual communication for architects.</Headline>
+        <div className="sliding-background" />
+        <div className="container">
+          <Headline>Visual communication for architects.</Headline>
+        </div>
       </div>
       <Navbar />
       <div className="main-section">
@@ -41,14 +45,19 @@ function About() {
           <Reveal>
             <h3 className="bio">
               <span style={{ "font-weight": "bold" }}>r—vis</span> is a creative
-              studio shaping how architecture is seen and experienced. We
-              specialize in architectural photography and film, visualization,
-              and graphic design crafting compelling visuals that bridge concept
-              and reality.
+              studio shaping how architecture is seen and remembered. We
+              specialize in{" "}
+              <span style={{ "font-weight": "bold" }}>
+                architectural photography and film
+              </span>
+              , <span style={{ "font-weight": "bold" }}>visualization</span>,
+              and <span style={{ "font-weight": "bold" }}>graphic design</span>,
+              crafting compelling visuals that translate concepts into immersive
+              narratives.
             </h3>
           </Reveal>
 
-          <div className="container-right">
+          <div className="about-right">
             <ul className="team">
               {TEAM_MEMBERS.map((member, index) => (
                 <Reveal>

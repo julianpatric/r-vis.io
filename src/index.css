@@ -96,7 +96,7 @@ ul {
 /* Layout */
 .container {
   max-width: var(--container-max-width);
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* Sections */

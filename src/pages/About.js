@@ -5,6 +5,8 @@ import "../components/Footer/Footer";
 import Footer from "../components/Footer/Footer";
 import CTA from "../components/CTA/CTA";
 import Headline from "../components/Headline/Headline";
+import aboutHeroImg from "../assets/photos/about-hero.jpg";
+import { motion } from "motion/react";
 
 function About() {
   const scrollToSection = () => {
@@ -61,16 +63,28 @@ function About() {
       link: "#",
     },
   ];
+
   return (
     <>
       <div className="about-hero">
-        <div className="sliding-background" />
+        {/* Scrolling Images */}
+        <motion.div
+          className="scrolling-images"
+          animate={{ x: ["0%", "-50%"] }} // Moves exactly half the container
+          transition={{ ease: "linear", duration: 45, repeat: Infinity }} // Smooth infinite loop
+        >
+          <img src={aboutHeroImg} alt="Background" className="scroll-img" />
+          <img src={aboutHeroImg} alt="Background" className="scroll-img" />
+        </motion.div>
+
         <div className="container">
           <Headline>Visual communication for architects.</Headline>
         </div>
-        <p onClick={scrollToSection}>LEARN MORE</p>
+
+        <p>LEARN MORE</p>
+
         <div className="arrow-container">
-          <div className="scroll-arrow">
+          <motion.div className="scroll-arrow">
             <svg
               width="50"
               height="80"
@@ -81,14 +95,15 @@ function About() {
               <path
                 d="M12 2V38M12 38L9 34M12 38L15 34"
                 stroke="currentColor"
-                stroke-width="0.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="0.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
-          </div>
+          </motion.div>
         </div>
       </div>
+
       <Navbar />
       <div className="main-section">
         <div className="container">

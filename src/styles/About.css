@@ -1,12 +1,3 @@
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-2580px, 0, 0);
-  }
-}
-
 @keyframes arrow {
   0% {
     transform: translateY(-100%);
@@ -25,9 +16,7 @@
     opacity: 0;
   }
 }
-
 .about-hero {
-  width: 100vw;
   height: 100vh;
   background-color: black;
   overflow: hidden;
@@ -43,14 +32,25 @@
   padding: 0;
 }
 
-.sliding-background {
-  background: url("../assets/photos/about-hero.jpg") repeat-x;
-  opacity: 0.5;
-  height: 100%;
-  width: 7740px;
-  animation: slide 60s linear infinite;
+/* Image Scrolling */
+.scrolling-images {
   position: absolute;
-  z-index: -3;
+  top: 0;
+  left: 0;
+  width: 200%; /* Ensures seamless wrap */
+  height: 100%;
+  display: flex;
+  white-space: nowrap;
+  z-index: -2;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.scroll-img {
+  width: 100vw; /* Each image takes full width */
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .about-hero p {

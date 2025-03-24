@@ -36,6 +36,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  color: var(--almost-white);
 }
 
 .sliding-background {
@@ -51,30 +52,27 @@
 .about-hero .container {
   margin-bottom: 100px;
   width: 1200px;
-  color: var(--almost-white);
+
   bottom: 0;
   text-align: center;
 }
 
 .about-hero p {
   cursor: pointer;
+  text-align: center;
 }
 
 .arrow-container {
   width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   position: relative;
   overflow: hidden;
 }
 
-.arrow {
+.scroll-arrow {
   position: relative;
-  animation: arrow 5s ease infinite;
+  animation: arrow 3.5s ease infinite;
   pointer-events: none;
-}
-
-.about-body {
-  padding-top: var(--spacing-md);
 }
 
 .bio {

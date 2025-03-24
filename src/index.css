@@ -81,13 +81,23 @@ h2 {
 
 h3 {
   font-size: 2.618rem;
+  line-height: 2.9rem;
+  letter-spacing: var(--letter-spacing-med);
   margin: 0;
 }
 
 h4 {
+  font-size: 2.618rem;
+  letter-spacing: var(--letter-spacing-med);
+  line-height: 2.9rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+h5 {
   font-size: 1.618rem;
   line-height: 1.34rem;
-  font-weight: normal;
+  font-weight: bold;
   margin: 0;
 }
 
@@ -102,14 +112,6 @@ subtitle {
   letter-spacing: 0.025rem;
   margin-bottom: 30px;
   opacity: 0.6;
-}
-
-h3 {
-  font-size: 2.618rem;
-  letter-spacing: var(--letter-spacing-med);
-}
-h4 {
-  font-size: 1.618rem;
 }
 
 /* Links */
@@ -132,17 +134,34 @@ ul {
   padding: 0;
 }
 
+/* Sections */
+.main-section {
+  background-color: var(--almost-white);
+  padding: var(--spacing-md) 0;
+
+  background-color: var(--almost-white);
+}
+
 /* Layout */
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;
+  display: flex;
+  padding-top: 30px;
+  gap: var(--spacing-md);
+  flex-direction: column;
 }
 
-/* Sections */
-.main-section {
-  background-color: var(--almost-white);
-  padding-bottom: 40px;
-  background-color: var(--almost-white);
+.flex-row {
+  flex-direction: row;
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
 }
 
 /* Media Queries */

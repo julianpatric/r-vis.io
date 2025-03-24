@@ -67,31 +67,31 @@ function About() {
         <div className="sliding-background" />
         <div className="container">
           <Headline>Visual communication for architects.</Headline>
-          <p onClick={scrollToSection}>LEARN MORE</p>
-          <div className="arrow-container">
-            <div className="arrow">
-              <svg
-                width="50"
-                height="80"
-                viewBox="0 0 24 50"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2V38M12 38L9 34M12 38L15 34"
-                  stroke="currentColor"
-                  stroke-width="0.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+        </div>
+        <p onClick={scrollToSection}>LEARN MORE</p>
+        <div className="arrow-container">
+          <div className="scroll-arrow">
+            <svg
+              width="50"
+              height="80"
+              viewBox="0 0 24 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2V38M12 38L9 34M12 38L15 34"
+                stroke="currentColor"
+                stroke-width="0.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
         </div>
       </div>
       <Navbar />
       <div className="main-section">
-        <div className="container about-body">
+        <div className="container">
           <Reveal>
             <h3 className="bio" id="target-section">
               <span style={{ "font-weight": "bold" }}>r—vis</span> is a creative

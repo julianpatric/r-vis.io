@@ -1,31 +1,23 @@
-.about-container {
-  display: flex;
-  padding-top: 30px;
-}
-.contact-left {
-  width: 40%;
-}
-
-.form-container {
-  width: 60%;
-}
-
 .contact-form {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 0px;
+  grid-auto-rows: max-content;
+  align-items: flex-start;
+  overflow: visible;
+  margin-bottom: 100px;
 }
 
-.about-tip {
+.contact-tip {
   margin: 0;
   width: 350px;
   line-height: 1.34rem;
 }
 
 .form-item {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  /*height: fit-content;*/
   grid-column: span 2;
   display: flex;
   flex-direction: column;
@@ -50,23 +42,69 @@ textarea {
   outline: none;
 }
 
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+select::invalid {
   color: #aaa;
 }
 
-textarea {
-  height: 80px;
-  resize: none;
+input:focus,
+textarea:focus {
+  border-color: #007bff;
 }
 
-.half {
-  display: flex;
-  gap: 20px;
+/* Wrapper to style the select */
+.custom-select {
+  width: 100%;
+  font-family: sans-serif;
 }
 
-.two-columns div {
-  flex: 1;
+label {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Styled select wrapper */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #667;
+  border-radius: 0px;
+  appearance: none; /* Removes default arrow */
+  background: transparent;
+  cursor: pointer;
+  color: #aaa;
+}
+
+/* Custom arrow */
+.arrow {
+  position: absolute;
+  top: 20%;
+  right: 12px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #667;
+  animation: none;
+}
+
+/* Select focus effect */
+select:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .submit-button {
@@ -85,3 +123,5 @@ textarea {
 .submit-button:hover {
   background: #011;
 }
+
+/* Frequently Asked Questions */

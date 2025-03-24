@@ -55,38 +55,40 @@ export function Home() {
       <Hero />
       <Navbar />
       <div className="main-section">
-        <Headline>Architecture seen, felt, remembered.</Headline>
-        <Services />
+        <div className="container">
+          <Headline>Architecture seen, felt, remembered.</Headline>
+          <Services />
 
-        <div className="container content-grid">
-          {projects?.images?.map((item, index) => (
-            <motion.div
-              initial={{ scale: 0.9 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.2 }}
-              key={index}
-              className={`homepage content ${item.displayType}`}
-              {...hoverProps}
-            >
-              <a href={`/projects/${item.link}`}>
-                <motion.img
-                  className="content-image"
-                  src={item.url}
-                  alt={item.caption}
-                />
-              </a>
+          <div className="content-grid">
+            {projects?.images?.map((item, index) => (
+              <motion.div
+                initial={{ scale: 0.9 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.2 }}
+                key={index}
+                className={`homepage content ${item.displayType}`}
+                {...hoverProps}
+              >
+                <a href={`/projects/${item.link}`}>
+                  <motion.img
+                    className="content-image"
+                    src={item.url}
+                    alt={item.caption}
+                  />
+                </a>
 
-              <div className="caption">
-                <p>{item.caption}</p>
-              </div>
-            </motion.div>
-          ))}
+                <div className="caption">
+                  <p>{item.caption}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="endtag">
+            <a href="/projects">See all our projects</a>
+          </div>
+          <CTA />
         </div>
-        <div className="endtag">
-          <a href="/projects">See all our projects</a>
-        </div>
-        <CTA />
       </div>
       <Footer />
 

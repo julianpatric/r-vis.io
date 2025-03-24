@@ -142,7 +142,14 @@
 @media (max-width: 768px) {
   /* Mobile */
 
+  .content-grid {
+    padding: 0px 0px;
+  }
   .isolate {
     margin: var(--spacing-xl) 0;
+  }
+
+  .endtag {
+    margin-top: 30px;
   }
 }

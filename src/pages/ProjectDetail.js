@@ -51,13 +51,13 @@ const ProjectDetail = () => {
       <Hero image={project.cover} halfHeight={true} />
       <Navbar />
       <div className="main-section">
-        <div className="header-section">
-          <div className="container">
-            <div className="title">
-              <subtitle>{project.client}</subtitle>
-              <h2>{project.title}</h2>
-            </div>
-            <p className="description">{project.description}</p>
+        <div className="container header-section">
+          <div className="header-left">
+            <subtitle>{project.client}</subtitle>
+            <h2>{project.title}</h2>
+          </div>
+          <div className="header-right">
+            <p>{project.description}</p>
           </div>
         </div>
 

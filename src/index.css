@@ -17,9 +17,6 @@
   --spacing-lg: 100px;
   --spacing-xl: 200px;
 
-  /* Container */
-  --container-max-width: 1200px;
-
   /* Transitions */
   --transition-fast: 300ms;
   --transition-normal: 500ms;
@@ -69,14 +66,13 @@ h2 {
 
 h1 {
   font-size: 6.854rem;
-  line-height: 5.4rem;
+  line-height: 5.5rem;
   width: 100%;
 }
 
 h2 {
   font-size: 4.236rem;
   line-height: 4.2rem;
-  margin-top: -0.5rem;
 }
 
 h3 {
@@ -144,7 +140,7 @@ ul {
 
 /* Layout */
 .container {
-  max-width: var(--container-max-width);
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   padding-top: 30px;
@@ -167,6 +163,9 @@ ul {
 /* Media Queries */
 @media (max-width: 1024px) {
   /* Tablet */
+  .container {
+    max-width: 950px;
+  }
 }
 @media (max-width: 768px) {
   /* Mobile */

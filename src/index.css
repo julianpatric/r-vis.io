@@ -189,4 +189,16 @@ ul {
   .container {
     padding: 0 20px;
   }
+
+  .container.flex-row {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+  }
 }

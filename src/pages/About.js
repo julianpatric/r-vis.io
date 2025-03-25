@@ -7,6 +7,7 @@ import CTA from "../components/CTA/CTA";
 import Headline from "../components/Headline/Headline";
 import aboutHeroImg from "../assets/photos/about-hero.jpg";
 import { motion } from "motion/react";
+import logo from "../assets/icons/logo-white.svg";
 
 function About() {
   const scrollToSection = () => {
@@ -70,37 +71,48 @@ function About() {
         {/* Scrolling Images */}
         <motion.div
           className="scrolling-images"
-          animate={{ x: ["0%", "-50%"] }} // Moves exactly half the container
-          transition={{ ease: "linear", duration: 45, repeat: Infinity }} // Smooth infinite loop
+          animate={{
+            x: ["0%", "-50%"],
+          }} // Moves exactly half the container
+          transition={{
+            ease: "linear",
+            duration: 45,
+            repeat: Infinity,
+          }} // Smooth infinite loop
         >
           <img src={aboutHeroImg} alt="Background" className="scroll-img" />
           <img src={aboutHeroImg} alt="Background" className="scroll-img" />
         </motion.div>
 
         <div className="container">
+          <div className="about-logo">
+            <img src={logo} />
+          </div>
           <Headline>Visual communication for architects.</Headline>
-        </div>
 
-        <p>LEARN MORE</p>
+          <div className="learn-more">
+            <p>LEARN MORE</p>
 
-        <div className="arrow-container">
-          <motion.div className="scroll-arrow">
-            <svg
-              width="50"
-              height="80"
-              viewBox="0 0 24 50"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 2V38M12 38L9 34M12 38L15 34"
-                stroke="currentColor"
-                strokeWidth="0.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </motion.div>
+            <div className="arrow-container">
+              <motion.div className="scroll-arrow">
+                <svg
+                  width="50"
+                  height="80"
+                  viewBox="0 0 24 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2V38M12 38L9 34M12 38L15 34"
+                    stroke="currentColor"
+                    strokeWidth="0.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
 

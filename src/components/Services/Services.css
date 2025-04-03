@@ -15,34 +15,45 @@
   padding: 20px 0;
 }
 
-.service {
+.service-item {
+  height: 430px;
+  width: calc(100% - 40px);
+  background-color: lightgray;
+  position: relative;
+}
+
+.service-front {
+  position: absolute;
+  bottom: 0;
+  justify-content: space-between;
+  height: calc(100% - 40px);
+  border: solid var(--primary-color) 0.5px;
+  text-align: left;
+  transition-duration: 300ms;
+  padding: 20px;
+  background-color: var(--almost-white);
+  width: calc(100% - 40px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 430px;
-  width: calc(100% - 40px);
-  border: solid var(--primary-color) 0.5px;
-  text-align: left;
-  padding: 20px;
-  transition-duration: 300ms;
 }
 
-.service .subcategories {
+.service-front .subcategories {
   position: relative;
   bottom: 0px;
 }
 
-.service:hover {
-  background-color: var(--primary-color);
-  color: var(--almost-white);
-  transition-duration: 300ms;
+.service-item:hover .service-front {
+  color: var(--primary-color);
+  transition-duration: 500ms;
+  height: 200px;
 }
 
-.service h3 {
+.service-front h3 {
   transition: padding 300ms ease-in-out;
 }
 
-.service:hover h3 {
+.service-front:hover h3 {
   padding: 10px 0;
 }
 

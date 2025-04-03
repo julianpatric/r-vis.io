@@ -4,13 +4,18 @@ export default function ServiceItem(props) {
   };
 
   return (
-    <li className="service" onClick={handleClick} style={{ cursor: "pointer" }}>
-      <h3>{props.title}</h3>
-      <ul className="subcategories">
-        {props.subcategories.map((subcategory, index) => (
-          <li key={index}>— {subcategory}</li>
-        ))}
-      </ul>
-    </li>
+    <>
+      <li className="service-item">
+        <div className="service-front">
+          <h3>{props.title}</h3>
+          <ul className="subcategories">
+            {props.subcategories.map((subcategory, index) => (
+              <li key={index}>— {subcategory}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="service-back"></div>
+      </li>
+    </>
   );
 }

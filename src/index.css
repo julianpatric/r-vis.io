@@ -7,6 +7,7 @@
   /* Typography */
   --font-family-base: "Space Grotesk", sans-serif;
   --letter-spacing-base: -0.05rem;
+  --letter-spacing-small: -0.12rem;
   --letter-spacing-med: -0.17rem;
   --letter-spacing-large: -0.35rem;
 
@@ -200,5 +201,17 @@ ul {
 
   .right {
     width: 100%;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 3.3rem;
+    letter-spacing: var(--letter-spacing-med);
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: var(--letter-spacing-small);
   }
 }

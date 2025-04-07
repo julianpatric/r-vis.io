@@ -66,7 +66,17 @@
   .services {
     flex-direction: column;
   }
-  .service {
-    height: 150px;
+  .service-item {
+    height: 200px;
+    width: 100%;
+  }
+
+  .service-item:hover .service-front {
+    height: calc(100% - 40px);
+    width: 150px;
+  }
+
+  .service-item:hover .service-front h3 {
+    padding: 0;
   }
 }

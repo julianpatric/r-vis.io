@@ -90,6 +90,12 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'youtubeID',
+      title: 'Youtube Video ID',
+      type: 'string',
+      description: 'Enter the ID of the Youtube video you want to embed.',
+    }),
+    defineField({
       name: 'endtag',
       title: 'Endtag',
       type: 'string',

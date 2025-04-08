@@ -36,9 +36,9 @@ export default function CollapsibleItem({ item, index }) {
               <path
                 d="M12 4V20M4 12H20"
                 stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
+                strokeWidth="1.5"
+                strokeLinecap="butt"
+                strokeLinejoin="miter"
               />
             </svg>
           </span>

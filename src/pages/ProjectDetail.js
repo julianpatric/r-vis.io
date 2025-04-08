@@ -68,7 +68,7 @@ const ProjectDetail = () => {
         <div className="container header-section">
           <div className="header-left">
             <subtitle>{project.client}</subtitle>
-            <h2>{project.title}</h2>
+            <h1>{project.title}</h1>
           </div>
           <div className="header-right">
             <p>{project.description}</p>

@@ -36,7 +36,7 @@
 .footer-email a {
   font-size: 2.4rem;
   line-height: 0rem;
-  font-weight: bold;
+  font-weight: 700;
   border-bottom: solid transparent 3px;
   transition-duration: 300ms;
 }
@@ -54,7 +54,7 @@
 }
 
 .sitemap-header {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .footer-sitemap a {

@@ -37,6 +37,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [isServiceSelected, setIsServiceSelected] = useState(false);
 
   const {
     register,
@@ -89,6 +90,15 @@ export default function Contact() {
     }
   };
 
+  const selectClass = () => {
+    if (errors.service) {
+      return "error";
+    } else if (isServiceSelected) {
+      return "selected";
+    }
+    return "";
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -127,7 +137,7 @@ export default function Contact() {
                   })}
                   type="text"
                   id="firstName"
-                  placeholder="John"
+                  placeholder="Leandro"
                   className={errors.firstName ? "error" : ""}
                 />
                 {errors.firstName && (
@@ -144,7 +154,7 @@ export default function Contact() {
                   })}
                   type="text"
                   id="lastName"
-                  placeholder="Doe"
+                  placeholder="Locsin"
                   className={errors.lastName ? "error" : ""}
                 />
                 {errors.lastName && (
@@ -194,9 +204,19 @@ export default function Contact() {
                       required: "Please select a service",
                     })}
                     id="service"
-                    className={errors.service ? "error" : ""}
+                    onChange={(e) => {
+                      setIsServiceSelected(true);
+                      if (e.target.value) {
+                        if (errors.service) {
+                          errors.service = undefined;
+                        }
+                      }
+                    }}
+                    className={selectClass()}
                   >
-                    <option value="">Select a subject</option>
+                    <option value="" disabled>
+                      Select a subject
+                    </option>
                     <option value="architectural-photography">
                       Architectural Photography & Film
                     </option>

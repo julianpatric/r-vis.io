@@ -17,7 +17,7 @@
 
 .form-item {
   margin-bottom: 40px;
-  /*height: fit-content;*/
+  height: fit-content;
   grid-column: span 2;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,8 @@ textarea {
   font-size: 16px;
   background: transparent;
   outline: none;
+  letter-spacing: -0.03rem;
+  font-family: "Space Grotesk";
 }
 
 textarea {
@@ -110,7 +112,7 @@ label {
 
 select {
   width: 100%;
-  padding: 10px 0;
+  padding: 12px 0;
   font-size: 1rem;
   border: none;
   border-bottom: 1px solid #667;
@@ -119,6 +121,10 @@ select {
   background: transparent;
   cursor: pointer;
   color: #aaa;
+}
+
+select.selected {
+  color: var(--primary-color);
 }
 
 /* Custom arrow */
@@ -164,10 +170,6 @@ select:focus {
 
 /* Media Queries */
 @media (max-width: 1024px) {
-  .contact-form {
-    grid-template-columns: 1fr;
-  }
-
   .half {
     grid-column: span 1;
   }

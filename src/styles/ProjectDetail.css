@@ -28,13 +28,14 @@
 
 .video-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 1000px;
   background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  overflow: hidden;
 }
 
 .video-section video {
@@ -45,7 +46,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.25;
-  margin: 0 20px;
+  margin: 0;
 }
 
 .video-container {
@@ -80,18 +81,30 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .video-player {
   margin: 0 auto;
   position: relative;
   z-index: 1001;
+  width: 90%;
+  max-width: 960px;
+  aspect-ratio: 16/9;
+}
+
+.video-player iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .video-player-container.active {
@@ -124,6 +137,9 @@
 /* Media Queries */
 @media (max-width: 1024px) {
   /* Tablet */
+  .video-player {
+    width: 95%;
+  }
 }
 @media (max-width: 768px) {
   /* Mobile */
@@ -136,4 +152,24 @@
   .header-right {
     width: 100%;
   }
+  .video-player {
+    width: 100%;
+  }
+  .close-button {
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.main-section {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  width: 100%;
+  overflow: hidden;
 }

@@ -57,8 +57,9 @@ export function Home() {
       <div className="main-section">
         <div className="container">
           <Headline>Architecture seen, felt, remembered.</Headline>
-          <Services />
-
+        </div>
+        <Services />
+        <div className="container">
           <div className="content-grid">
             {projects?.images?.map((item, index) => (
               <motion.div

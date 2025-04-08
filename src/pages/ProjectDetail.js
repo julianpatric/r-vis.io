@@ -53,10 +53,12 @@ const ProjectDetail = () => {
   if (!project) return null;
 
   const videoOptions = {
-    height: "540",
-    width: "960",
+    height: "100%",
+    width: "100%",
     playerVars: {
       showinfo: 1,
+      modestbranding: 1,
+      rel: 0,
     },
   };
 

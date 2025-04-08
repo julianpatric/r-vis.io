@@ -13,4 +13,8 @@
 }
 @media (max-width: 768px) {
   /* Mobile */
+
+  .headline-section {
+    height: 240px;
+  }
 }

@@ -27,6 +27,7 @@
   top: 0;
   left: 0;
   transition-duration: 500ms;
+  width: 100vw;
 }
 
 .filler {

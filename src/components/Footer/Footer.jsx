@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../../assets/icons/logo-white.svg";
+import logo from "../../assets/icons/logo-light.svg";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -13,7 +13,7 @@ export default function Footer() {
           </div>
           <div className="footer-sitemap">
             <ul>
-              <li className="sitemap-header">r—vis</li>
+              <li className="sitemap-header">navigate</li>
               <li>
                 <Link to="/">home</Link>
               </li>
@@ -22,18 +22,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/contact">contact</Link>
-              </li>
-            </ul>
-            <ul>
-              <li className="sitemap-header">services</li>
-              <li>
-                <Link to="/services/photo-film">photo & film</Link>
-              </li>
-              <li>
-                <Link to="/services/visualization">visualization</Link>
-              </li>
-              <li>
-                <Link to="/services/graphic-design">graphic design</Link>
               </li>
             </ul>
             <ul>

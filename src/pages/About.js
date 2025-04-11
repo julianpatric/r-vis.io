@@ -7,7 +7,7 @@ import CTA from "../components/CTA/CTA";
 import Headline from "../components/Headline/Headline";
 import aboutHeroImg from "../assets/photos/about-hero.jpg";
 import { motion } from "motion/react";
-import logo from "../assets/icons/logo-white.svg";
+import logo from "../assets/icons/logo-light.svg";
 
 function About() {
   const scrollToSection = () => {

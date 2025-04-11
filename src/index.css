@@ -142,8 +142,7 @@ ul {
 /* Sections */
 .main-section {
   background-color: var(--almost-white);
-  padding: var(--spacing-md) 0;
-
+  padding: var(--spacing-md);
   background-color: var(--almost-white);
 }
 

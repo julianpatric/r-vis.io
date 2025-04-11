@@ -131,4 +131,9 @@
     width: fit-content;
     margin-left: auto;
   }
+
+  .about-hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.256rem;
+  }
 }

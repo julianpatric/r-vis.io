@@ -1,14 +1,14 @@
+import { useEffect, useState, useRef } from "react";
+import { useScroll } from "motion/react";
+import { motion } from "motion/react";
+import client from "../sanity/client.js";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import Hero from "../components/Hero/Hero.jsx";
-import { useEffect, useState } from "react";
-import client from "../sanity/client.js";
-import { useScroll } from "motion/react";
 import Tooltip from "../components/Tooltip/Tooltip";
 import useHover from "../components/Tooltip/useHover";
 import Headline from "../components/Headline/Headline";
 import Services from "../components/Services/Services.jsx";
-import { motion } from "motion/react";
 import CTA from "../components/CTA/CTA";
 import "../styles/ContentGrid.css";
 
@@ -16,9 +16,10 @@ export function Home() {
   const [projects, setProjects] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { scrollYProgress } = useScroll();
+
   const { isHovered, hoverProps } = useHover();
 
+  // Fetch projects from sanity backend
   useEffect(() => {
     const fetchProjects = async () => {
       try {

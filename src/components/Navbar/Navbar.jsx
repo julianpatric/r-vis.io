@@ -1,4 +1,4 @@
-import logo from "../../assets/icons/logo.svg";
+import logo from "../../assets/icons/logo-dark.svg";
 import "./Navbar.css";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";

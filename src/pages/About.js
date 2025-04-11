@@ -5,7 +5,7 @@ import "../components/Footer/Footer";
 import Footer from "../components/Footer/Footer";
 import CTA from "../components/CTA/CTA";
 import Headline from "../components/Headline/Headline";
-import aboutHeroImg from "../assets/photos/about-hero.jpg";
+import aboutHeroImg from "../assets/imgs/about-hero.jpg";
 import { motion } from "motion/react";
 import logo from "../assets/icons/logo-light.svg";
 

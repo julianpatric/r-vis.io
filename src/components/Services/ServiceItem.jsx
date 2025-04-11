@@ -1,7 +1,15 @@
+import { useState, useEffect } from "react";
+
 export default function ServiceItem(props) {
-  const handleClick = () => {
-    window.location.href = `/services/${props.linkURL}`;
-  };
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex((prev) => (prev + 1) % props.images.length);
+    }, 1000);
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
 
   return (
     <>
@@ -14,7 +22,9 @@ export default function ServiceItem(props) {
             ))}
           </ul>
         </div>
-        <div className="service-back"></div>
+        <div className="service-back">
+          <img src={props.images[imageIndex]} alt={props.title} />
+        </div>
       </li>
     </>
   );

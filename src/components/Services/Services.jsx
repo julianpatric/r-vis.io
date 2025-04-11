@@ -1,33 +1,33 @@
 import "./Services.css";
 import ServiceItem from "./ServiceItem.jsx";
+import photography01 from "../../assets/imgs/services/photography-01.jpg";
+import photography02 from "../../assets/imgs/services/photography-02.jpg";
+import photography03 from "../../assets/imgs/services/photography-03.jpg";
+import photography04 from "../../assets/imgs/services/photography-04.jpg";
 
 const SERVICES = [
   {
     title: "Photography & Film",
     subcategories: [
-      "Architectural documentation",
-      "Video feature",
-      "Walkthrough video",
+      "Architectural Documentation",
+      "Video Features",
+      "Walkthrough Videos",
     ],
-    linkURL: "photography",
+    images: [photography01, photography02, photography03, photography04],
   },
   {
     title: "Visualization",
-    subcategories: [
-      "Architectural visualization",
-      "Video renders",
-      "Animation",
-    ],
-    linkURL: "vis",
+    subcategories: ["Still Renders", "Video Renders", "Walkthrough Videos"],
+    images: [photography01, photography02, photography03],
   },
   {
     title: "Graphic Design",
     subcategories: [
-      "Project presentation",
-      "Architectural boards",
-      "Project branding",
+      "Project Presentation",
+      "Architectural Boards",
+      "Project Branding",
     ],
-    linkURL: "graphics",
+    images: [photography01, photography02, photography03],
   },
 ];
 

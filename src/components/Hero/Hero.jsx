@@ -1,5 +1,5 @@
 import "./Hero.css";
-import defaultImage from "../../assets/photos/hero.jpg";
+import defaultImage from "../../assets/imgs/hero.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero({ image = defaultImage, halfHeight = false }) {

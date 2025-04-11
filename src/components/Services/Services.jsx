@@ -4,6 +4,12 @@ import photography01 from "../../assets/imgs/services/photography-01.jpg";
 import photography02 from "../../assets/imgs/services/photography-02.jpg";
 import photography03 from "../../assets/imgs/services/photography-03.jpg";
 import photography04 from "../../assets/imgs/services/photography-04.jpg";
+import visualization01 from "../../assets/imgs/services/visualization-01.jpg";
+import visualization02 from "../../assets/imgs/services/visualization-02.jpg";
+import visualization03 from "../../assets/imgs/services/visualization-03.jpg";
+import visualization04 from "../../assets/imgs/services/visualization-04.jpg";
+import visualization05 from "../../assets/imgs/services/visualization-05.jpg";
+import visualization06 from "../../assets/imgs/services/visualization-06.jpg";
 
 const SERVICES = [
   {
@@ -18,7 +24,13 @@ const SERVICES = [
   {
     title: "Visualization",
     subcategories: ["Still Renders", "Video Renders", "Walkthrough Videos"],
-    images: [photography01, photography02, photography03],
+    images: [
+      visualization01,
+      visualization02,
+      visualization03,
+      visualization04,
+      visualization05,
+    ],
   },
   {
     title: "Graphic Design",

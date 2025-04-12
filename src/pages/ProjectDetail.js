@@ -28,7 +28,7 @@ const ProjectDetail = () => {
               description,
               "cover": coverPhoto.asset->url,
               "images": images[]{
-                "url": asset->url,
+                "url": asset->url + "?w=1500",
                 displayType
               },
               "slug": slug.current,

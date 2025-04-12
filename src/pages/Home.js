@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useScroll } from "motion/react";
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import client from "../sanity/client.js";
 import Navbar from "../components/Navbar/Navbar.jsx";
@@ -10,12 +11,17 @@ import useHover from "../components/Tooltip/useHover";
 import Headline from "../components/Headline/Headline";
 import Services from "../components/Services/Services.jsx";
 import CTA from "../components/CTA/CTA";
+import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
 import "../styles/ContentGrid.css";
 
 export function Home() {
   const [projects, setProjects] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const imageRefs = useRef([]);
+  const loadedImages = useRef(0);
+  const startTime = useRef(Date.now());
 
   const { isHovered, hoverProps } = useHover();
 
@@ -26,9 +32,9 @@ export function Home() {
         setIsLoading(true);
         const data = await client.fetch(
           `*[_type == "project" && slug.current == 'homepage-items'][0]{
-            "defaultHero": coverPhoto.asset->url,
+            "defaultHero": coverPhoto.asset->url+ "?w=2500",
             "images": images[]{
-              "url": asset->url,
+              "url": asset->url + "?w=1500",
               displayType, 
               alt, 
               link, 
@@ -47,8 +53,73 @@ export function Home() {
     fetchProjects();
   }, []);
 
+  // Track image loading
+  useEffect(() => {
+    if (!projects?.images?.length) return;
+
+    // Reset loaded images count when projects change
+    loadedImages.current = 0;
+    const totalImages = projects.images.length;
+
+    // If there are no images to load, set imagesLoaded to true
+    if (totalImages === 0) {
+      setImagesLoaded(true);
+      return;
+    }
+
+    const handleImageLoad = () => {
+      loadedImages.current += 1;
+
+      if (loadedImages.current >= totalImages) {
+        const loadTime = Date.now() - startTime.current;
+        console.log(`Page load time: ${loadTime}ms`);
+        setImagesLoaded(true);
+      }
+    };
+
+    // Add event listeners to all images
+    const imageElements = document.querySelectorAll(".content-image");
+    imageElements.forEach((img) => {
+      // Check if image is already loaded
+      if (img.complete) {
+        handleImageLoad();
+      } else {
+        img.addEventListener("load", handleImageLoad);
+        img.addEventListener("error", handleImageLoad); // Also handle errors
+      }
+    });
+
+    // Fallback: if no images are found or all are cached, set imagesLoaded to true
+    if (imageElements.length === 0) {
+      setImagesLoaded(true);
+    }
+
+    // Set a timeout to ensure loading screen disappears even if some images fail to load
+    const timeoutId = setTimeout(() => {
+      if (!imagesLoaded) {
+        const loadTime = Date.now() - startTime.current;
+        console.log(`Page load time (timeout): ${loadTime}ms`);
+        setImagesLoaded(true);
+      }
+    }, 5000); // 5 second timeout
+
+    return () => {
+      // Clean up event listeners
+      imageElements.forEach((img) => {
+        img.removeEventListener("load", handleImageLoad);
+        img.removeEventListener("error", handleImageLoad);
+      });
+      clearTimeout(timeoutId);
+    };
+  }, [projects]);
+
   if (error) {
     return <div>Error loading content: {error}</div>;
+  }
+
+  // Show loading screen while data is being fetched or images are loading
+  if (isLoading || !imagesLoaded) {
+    return <LoadingScreen />;
   }
 
   return (
@@ -72,13 +143,13 @@ export function Home() {
                 className={`homepage content ${item.displayType}`}
                 {...hoverProps}
               >
-                <a href={`/projects/${item.link}`}>
+                <Link to={`/projects/${item.link}`}>
                   <motion.img
                     className="content-image"
                     src={item.url}
                     alt={item.caption}
                   />
-                </a>
+                </Link>
 
                 <div className="caption">
                   <p>{item.caption}</p>
@@ -86,9 +157,11 @@ export function Home() {
               </motion.div>
             ))}
           </div>
+          {/*
           <div className="endtag">
-            <a href="/projects">See all our projects</a>
+             <a href="/projects">See all our projects</a> 
           </div>
+          */}
           <CTA />
         </div>
       </div>

@@ -279,7 +279,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        <div className="container flex-row">
+        <div className="container flex-row bottom-space">
           <div className="left">
             <h3>Frequently Asked Questions</h3>
           </div>

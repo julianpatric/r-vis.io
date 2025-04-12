@@ -27,7 +27,7 @@ const ProjectDetail = () => {
               title,
               client,
               description,
-              "cover": coverPhoto.asset->url,
+              "cover": coverPhoto.asset->url+ "?w=2500",
               "images": images[]{
                 "url": asset->url + "?w=1500",
                 displayType

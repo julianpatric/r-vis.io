@@ -142,7 +142,6 @@ ul {
   margin: 0 auto;
   display: flex;
   padding-top: 30px;
-  gap: var(--spacing-md);
   flex-direction: column;
 }
 
@@ -156,6 +155,10 @@ ul {
 
 .right {
   width: 60%;
+}
+
+.bottom-space {
+  padding-bottom: var(--spacing-lg);
 }
 
 /* Reveal */

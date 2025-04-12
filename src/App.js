@@ -5,11 +5,92 @@ import Contact from "./pages/Contact";
 import Test from "./pages/Test";
 import Typography from "./pages/Typography";
 import { Home } from "./pages/Home";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { motion, AnimatePresence } from "motion/react";
+
+const PageTransition = ({ children }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <PageTransition>
+              <Home />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <PageTransition>
+              <About />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageTransition>
+              <Contact />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/projects/:slug"
+          element={
+            <PageTransition>
+              <ProjectDetail />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/test"
+          element={
+            <PageTransition>
+              <Test />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/*"
+          element={
+            <PageTransition>
+              <NotFound />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/type"
+          element={
+            <PageTransition>
+              <Typography />
+            </PageTransition>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
+};
 
 function App() {
   useEffect(() => {
@@ -38,15 +119,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
-          <Route path="/test" element={<Test />} />
-          <Route path="/*" element={<NotFound />} />
-          <Route path="/type" element={<Typography />} />
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
       <SpeedInsights />
     </>

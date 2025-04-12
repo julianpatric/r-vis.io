@@ -52,25 +52,25 @@ const Navbar = () => {
           <Reveal>
             <ul className="nav">
               <li>
-                <a href="/" className={currentPath === "/" ? "active" : ""}>
+                <Link to="/" className={currentPath === "/" ? "active" : ""}>
                   home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className={currentPath === "/about" ? "active" : ""}
                 >
                   about
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className={currentPath === "/contact" ? "active" : ""}
                 >
                   contact
-                </a>
+                </Link>
               </li>
             </ul>
           </Reveal>

@@ -144,7 +144,7 @@
   /* Mobile */
 
   .content-grid {
-    padding: 0px 0px;
+    padding: 0px 20px;
   }
   .isolate {
     margin: var(--spacing-xl) 0;

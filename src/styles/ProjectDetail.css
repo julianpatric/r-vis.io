@@ -10,31 +10,43 @@
   font-size: 4.236rem;
   letter-spacing: -0.2rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  line-height: 4rem;
 }
+
+.client-name {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025rem;
+  margin-bottom: 50px;
+  line-height: 2.5rem;
+  opacity: 0.6;
+}
+
 .header-left {
   text-align: left;
-  width: 60%;
-  text-transform: uppercase;
+  width: 50%;
+  text-transform: capitalize;
 }
 
 .header-right {
-  width: 40%;
+  width: 50%;
 }
 
 .header-right p {
   margin: 0;
+  margin-top: 40px;
 }
 
 .video-section {
   position: relative;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 1000px;
-  background-color: var(--primary-color);
+  background-color: black;
   display: flex;
   justify-content: center;
+  margin: 80px auto 0 auto;
   align-items: center;
-  margin-top: 100px;
   overflow: hidden;
 }
 
@@ -45,13 +57,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.25;
+  opacity: 0.5;
   margin: 0;
 }
 
-.video-container {
+.video-thumbnail-container {
   position: relative;
   width: 500px;
+  transition: ease 500ms;
 }
 
 .video-thumbnail {
@@ -59,7 +72,19 @@
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 10px 20px 0 rgba(7, 26, 30, 0.6);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.6);
+  transition: ease 500ms;
+  cursor: pointer;
+}
+
+.video-thumbnail-container:hover {
+  width: 550px;
+  transition: ease 500ms;
+}
+
+.video-thumbnail-container:hover .video-thumbnail {
+  box-shadow: 0 0 100px 10px rgba(109, 131, 135, 1);
+  transition: ease 500ms;
 }
 
 .play-button {
@@ -69,9 +94,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-}
-
-.play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -159,16 +181,21 @@
     right: 10px;
     top: 10px;
   }
-}
 
-.main-section {
-  overflow-x: hidden;
-}
+  .main-section {
+    overflow-x: hidden;
+  }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-md);
-  width: 100%;
-  overflow: hidden;
+  .video-section {
+    height: 500px;
+    width: 100%;
+  }
+
+  .video-thumbnail-container {
+    width: 300px;
+  }
+
+  .video-thumbnail-container:hover {
+    width: 350px;
+  }
 }

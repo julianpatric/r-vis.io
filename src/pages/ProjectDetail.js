@@ -9,13 +9,14 @@ import CTA from "../components/CTA/CTA";
 import "../styles/ProjectDetail.css";
 import { useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
-import throughHouseBg from "../assets/videos/through-house-bg.mov";
-import playButton from "../assets/icons/play-button.svg";
+import { ReactComponent as PlayButton } from "../assets/icons/play-button.svg";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
   const [project, setProject] = useState(null);
   const [videoPlaying, setVideoPlaying] = useState(false);
+
+  console.log(project);
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -33,6 +34,7 @@ const ProjectDetail = () => {
               },
               "slug": slug.current,
               youtubeID,
+              "videoBgURL": videoBg.asset->url,
               endtag,
               endtagLink
             }`,
@@ -69,7 +71,7 @@ const ProjectDetail = () => {
       <div className="main-section">
         <div className="container header-section">
           <div className="header-left">
-            <subtitle>{project.client}</subtitle>
+            <span className="client-name">{project.client}</span>
             <h1>{project.title}</h1>
           </div>
           <div className="header-right">
@@ -97,13 +99,13 @@ const ProjectDetail = () => {
         {project.youtubeID && (
           <div className="video-section">
             <video autoPlay muted loop>
-              <source src={throughHouseBg} type="video/quicktime" />
+              <source src={project.videoBgURL} type="video/mp4" />
             </video>
             <div
-              className="video-container"
+              className="video-thumbnail-container"
               onClick={() => setVideoPlaying(true)}
             >
-              <img className="play-button" src={playButton} alt="Play" />
+              <PlayButton className="play-button" />
               <img
                 className="video-thumbnail"
                 src={`https://img.youtube.com/vi/${project.youtubeID}/maxresdefault.jpg`}

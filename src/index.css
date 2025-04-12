@@ -111,14 +111,6 @@ p {
   line-height: 1.75;
 }
 
-subtitle {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.025rem;
-  margin-bottom: 30px;
-  opacity: 0.6;
-}
-
 /* Links */
 a {
   color: inherit;
@@ -141,8 +133,6 @@ ul {
 
 /* Sections */
 .main-section {
-  background-color: var(--almost-white);
-  padding: var(--spacing-md);
   background-color: var(--almost-white);
 }
 

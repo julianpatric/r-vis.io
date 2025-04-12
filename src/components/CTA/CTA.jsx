@@ -7,7 +7,9 @@ export default function CTA() {
     <div className="cta-container">
       <Reveal>
         <br />
-        <h2>Your ideas, our visuals. Let’s share the stories of spaces.</h2>
+        <span class="CTA">
+          Your ideas, our visuals. Let’s share the stories of spaces.
+        </span>
       </Reveal>
       <Reveal>
         <Button to="/contact">Get in touch</Button>

@@ -152,28 +152,27 @@ function About() {
                 The idea behind r—vis began three years prior to its founding in
                 2025. Our vision was simple: to create the most memorable images
                 for architecture. As then students of the discipline, we
-                understood that how a design is presented, its context, process,
-                and intentions, is just as important as the design itself. This
-                belief continues to shape our approach today, guiding the way we
-                frame each shot, compose each render, and communicate every idea
-                on each project that we work on.
+                understood that the way a design is presented—its context,
+                process, and intentions—is just as important as the design
+                itself. This belief continues to shape our approach today,
+                guiding the way we frame each shot, compose each render, and
+                communicate every idea on each project that we work on.
               </p>
             </Reveal>
             <Reveal>
               <p className="story">
-                What started as personal interests during our time in
-                architecture school eventually grew into our distinct creative
-                strengths. Julian brings a strong foundation in the photography
-                and cinematography business, Lance contributes a precise eye for
-                architectural rendering, and Kevin adds depth through
+                What started as personal interests eventually grew into our
+                distinct creative crafts. Julian brings a strong foundation in
+                photography and cinematography, Lance contributes a precise eye
+                for architectural rendering, and Kevin adds depth through
                 illustration and graphic design.
               </p>
             </Reveal>
             <Reveal>
               <p className="story">
                 Together, we formed r—vis to combine our individual strengths
-                into a cohesive visual practice—one that’s grounded in design
-                and driven by storytelling.
+                into a cohesive practice—one that’s grounded in design and
+                driven by storytelling.
               </p>
             </Reveal>
           </div>

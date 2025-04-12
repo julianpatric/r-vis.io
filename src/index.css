@@ -6,9 +6,9 @@
 
   /* Typography */
   --font-family-base: "Space Grotesk", sans-serif;
-  --letter-spacing-base: -0.05rem;
+  --letter-spacing-base: -0.04rem;
   --letter-spacing-small: -0.12rem;
-  --letter-spacing-med: -0.17rem;
+  --letter-spacing-med: -0.12rem;
   --letter-spacing-large: -0.35rem;
 
   /* Spacing */
@@ -168,12 +168,16 @@ ul {
   width: 60%;
 }
 
+/* Reveal */
+.reveal {
+  overflow-y: hidden;
+  position: relative;
+  width: auto;
+}
+
 /* Media Queries */
 @media (max-width: 1024px) {
   /* Tablet */
-  .container {
-    max-width: 950px;
-  }
 }
 @media (max-width: 768px) {
   /* Mobile */
@@ -195,7 +199,7 @@ ul {
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0;
   }
 
   .container.flex-row {

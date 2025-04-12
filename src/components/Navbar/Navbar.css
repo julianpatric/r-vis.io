@@ -41,3 +41,10 @@
 .navbar .active {
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  /* Mobile */
+
+  .navbar {
+    width: 100vw;
+  }
+}

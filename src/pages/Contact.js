@@ -10,25 +10,25 @@ const FAQS = [
   {
     title: "What types of projects does r—vis work on?",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "We work across a wide range of architectural projects, including residential and commercial spaces, small interiors to large-scale developments, and both built and conceptual works. Whatever stage your project is in, our services are designed to help you communicate it with clarity and impact.",
     isOpen: false,
   },
   {
-    title: "How can I book a project?",
+    title: "How early should we get in touch with r—vis?",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "The earlier, the better. Involving us during the design or construction phase gives us more time to understand your vision and develop visuals that align with your goals and timeline. For photography and film, early booking helps us schedule shoots around favorable weather conditions. For visualization and graphic design, we typically require a lead time of 2–3 weeks, depending on the project’s complexity. We recommend reaching out as early as possible so we can plan accordingly.",
     isOpen: false,
   },
   {
-    title: "Where is r—vis based?",
+    title: "Where are you based?",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "We are based in Manila, Philippines. However, we’re open to working on international projects through remote collaboration or by arrangement for travel and on-site documentation.",
     isOpen: false,
   },
   {
-    title: "What are your rates?",
+    title: "How can I join your team?",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Although we are not actively hiring right now, we are always on the lookout for like-minded artists. If you’re passionate about architecture, design, or arts in general, connect with us via this contact form or email us at hello@r-vis.io. You may also send us a message on our Instagram.",
     isOpen: false,
   },
 ];

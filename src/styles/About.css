@@ -95,6 +95,10 @@
   width: 1000px;
 }
 
+.story {
+  text-align: justify;
+}
+
 .about-right {
   width: 550px;
   margin-left: auto;

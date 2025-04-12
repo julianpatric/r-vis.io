@@ -11,23 +11,35 @@
   background: none;
   border: none;
   text-align: left;
-  font-size: 1.618rem;
-  padding: 15px 25px 15px 0;
+  padding: 20px 25px 20px 0;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: ease-out 300ms;
+}
+
+.collapsible-title {
+  font-size: 1.618rem;
+  font-weight: 400;
   font-family: inherit;
   letter-spacing: inherit;
-  color: inherit;
-  transition: ease-out 300ms;
+  color: var(--primary-color);
+  margin-right: 10px;
 }
 
 .collapsible-button:hover {
   background-color: var(--primary-color);
-  color: white;
   transition: ease-out 300ms;
   padding-left: 25px;
+}
+
+.collapsible-button:hover .collapsible-title {
+  color: var(--almost-white);
+}
+
+.collapsible-button:hover .collapsible-icon svg {
+  color: var(--almost-white);
 }
 
 .collapsible-icon svg {
@@ -39,20 +51,27 @@
   transition: ease-out 400ms;
 }
 
-.icon {
-  width: 16px;
-  height: 16px;
-  stroke: currentColor;
-}
-
 .collapsible-content {
   background-color: #f1f1f1;
   max-height: 0px;
   overflow: hidden;
   transition: ease-out 500ms;
-  padding-right: 80px;
+  padding-right: 30px;
+  text-align: justify;
 }
 
 .collapsible-content.open {
   transition: ease-out 500ms;
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .collapsible-button {
+    font-size: 1.5rem;
+    padding-right: 10px;
+  }
+
+  .collapsible-icon svg {
+    width: 18px;
+  }
 }

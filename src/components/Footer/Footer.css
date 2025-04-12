@@ -7,6 +7,7 @@
   right: 0;
   height: 70vh;
   display: flex;
+  position: relative;
 }
 
 .footer-container {
@@ -15,6 +16,22 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
+  z-index: 3;
+}
+
+.footer-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: url("../../assets/icons/logotype-light.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-7.5%);
+  opacity: 0.02;
   width: 100%;
 }
 
@@ -30,19 +47,65 @@
 
 .footer-email {
   width: auto;
+  padding: 20px 0;
 }
 
-.footer-email a {
-  font-size: 2.4rem;
-  line-height: 0rem;
+.footer-email .email {
+  font-size: 3rem;
+  line-height: 3.3rem;
   font-weight: 700;
   border-bottom: solid transparent 3px;
   transition-duration: 300ms;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
 }
 
-.footer-email a:hover {
+.footer-email .email:hover {
   border-bottom: solid var(--almost-white) 2px;
   transition-duration: 300ms;
+}
+
+.footer-email .tooltip {
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--almost-white);
+  color: var(--primary-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin-top: 8px;
+  animation: fadeIn 0.2s ease-in-out;
+  line-height: 1.2rem;
+}
+
+.footer-email .tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--almost-white) transparent;
+}
+
+.footer-email p {
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 .footer-sitemap {
@@ -90,7 +153,7 @@
 @media (max-width: 768px) {
   /* Mobile */
   .footer-section {
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
     padding: 0;
   }
@@ -101,13 +164,23 @@
     gap: 30px;
   }
   .footer-email {
-    width: 90%;
+    width: 100%;
+    margin-left: 40px;
   }
+
+  .footer-email a {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
   .footer-sitemap {
     width: 90%;
+    justify-content: left;
+    gap: 100px;
   }
   .footer-copyright {
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
   }
 
   .footer-copyright p {
@@ -117,5 +190,6 @@
 
   .footer-container img {
     margin-left: var(--spacing-sm);
+    height: 20px;
   }
 }

@@ -10,8 +10,11 @@
   margin: auto;
 }
 
-.cta-container h2 {
+span.CTA {
   font-weight: 400;
+  font-size: 4.236rem;
+  line-height: 4.2rem;
+  letter-spacing: var(--letter-spacing-large);
 }
 
 @media (max-width: 1024px) {
@@ -23,7 +26,13 @@
 @media (max-width: 768px) {
   /* Mobile */
   .cta-container {
-    width: 95%;
+    width: 100%;
     padding: 50px 0;
+  }
+
+  span.CTA {
+    font-size: 2.6rem;
+    line-height: 2.1rem;
+    letter-spacing: var(--letter-spacing-med);
   }
 }

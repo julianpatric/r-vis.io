@@ -22,7 +22,7 @@ export default function CollapsibleItem({ item, index }) {
     <>
       <div key={index} className="collapsible-item">
         <button className="collapsible-button" onClick={toggle}>
-          {item.title}
+          <span className="collapsible-title">{item.title}</span>
           <span
             className={isOpen ? "collapsible-icon open" : "collapsible-icon"}
           >

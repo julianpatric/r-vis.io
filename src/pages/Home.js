@@ -64,10 +64,10 @@ export function Home() {
           <div className="content-grid">
             {projects?.images?.map((item, index) => (
               <motion.div
-                initial={{ scale: 0.9 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.2 }}
+                initial={{ scale: 0.9, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={index}
                 className={`homepage content ${item.displayType}`}
                 {...hoverProps}

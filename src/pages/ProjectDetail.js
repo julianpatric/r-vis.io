@@ -61,6 +61,7 @@ const ProjectDetail = () => {
       showinfo: 1,
       modestbranding: 1,
       rel: 0,
+      vq: "hd1080",
     },
   };
 
@@ -83,7 +84,7 @@ const ProjectDetail = () => {
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "0px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index}
               className={`content ${item.displayType}`}

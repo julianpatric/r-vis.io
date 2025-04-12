@@ -8,6 +8,9 @@ import Headline from "../components/Headline/Headline";
 import aboutHeroImg from "../assets/imgs/about-hero.jpg";
 import { motion } from "motion/react";
 import logo from "../assets/icons/logo-light.svg";
+import julianImg from "../assets/imgs/about/id2-julian.jpg";
+import kevinImg from "../assets/imgs/about/id2-kev.jpg";
+import lanceImg from "../assets/imgs/about/id2-lance.jpg";
 
 function About() {
   const scrollToSection = () => {
@@ -44,21 +47,21 @@ function About() {
   const TEAM_MEMBERS = [
     {
       name: "Julian Semilla",
-      photo: null,
+      photo: julianImg,
       title: "1",
       socials: "@julianpatric",
       link: "#",
     },
     {
       name: "Kevin Nuñez",
-      photo: null,
+      photo: kevinImg,
       title: "3",
       socials: "@kevvnunez",
       link: "#",
     },
     {
       name: "Lance Sy",
-      photo: null,
+      photo: lanceImg,
       title: "2",
       socials: "@landssea",
       link: "#",
@@ -139,7 +142,7 @@ function About() {
               {TEAM_MEMBERS.map((member, index) => (
                 <Reveal>
                   <li key={member.index}>
-                    <img src={member.link} />
+                    <img src={member.photo} />
                     <p style={{ "font-weight": "700" }}>{member.name}</p>
                     <p>{member.socials}</p>
                   </li>
@@ -171,7 +174,7 @@ function About() {
             <Reveal>
               <p className="story">
                 Together, we formed r—vis to combine our individual strengths
-                into a cohesive practice—one that’s grounded in design and
+                into a cohesive practice—one that's grounded in design and
                 driven by storytelling.
               </p>
             </Reveal>

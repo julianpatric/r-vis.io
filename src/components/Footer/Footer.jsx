@@ -18,16 +18,18 @@ export default function Footer() {
       <div className="footer-bg" />
       <div className="footer-container">
         <div className="footer-main">
-          <div className="footer-email">
-            <p>Work with us:</p>
-            <span className="email" onClick={handleEmailClick}>
-              hello@r-vis.io
-              {showTooltip && (
-                <span className="tooltip">Copied to clipboard!</span>
-              )}
-            </span>
-          </div>
+          <Reveal>
+            <div className="footer-email">
+              <p>Work with us:</p>
 
+              <span className="email" onClick={handleEmailClick}>
+                hello@r-vis.io
+                {showTooltip && (
+                  <span className="tooltip">Copied to clipboard!</span>
+                )}
+              </span>
+            </div>
+          </Reveal>
           <div className="footer-sitemap">
             <Reveal>
               <ul>

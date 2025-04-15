@@ -132,6 +132,9 @@
 @media (max-width: 768px) {
   /* Mobile */
 
+  .about-hero {
+    height: 95vh;
+  }
   .about-right {
     width: 100%;
   }

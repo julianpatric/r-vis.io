@@ -111,9 +111,11 @@
 
 @media (max-width: 1024px) {
   /* Tablet */
-
-  .content-grid {
-    padding: 0;
+  .container.header-section {
+    padding: 40px 20px;
+  }
+  .container.content-grid {
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
   }
@@ -143,9 +145,6 @@
 @media (max-width: 768px) {
   /* Mobile */
 
-  .content-grid {
-    padding: 0 20px;
-  }
   .isolate {
     margin: var(--spacing-xl) 0;
   }

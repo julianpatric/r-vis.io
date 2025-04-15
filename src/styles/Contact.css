@@ -42,6 +42,7 @@ textarea {
   outline: none;
   letter-spacing: -0.03rem;
   font-family: "Space Grotesk";
+  border-radius: 0;
 }
 
 textarea {

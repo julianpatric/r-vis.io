@@ -171,6 +171,11 @@ ul {
 /* Media Queries */
 @media (max-width: 1024px) {
   /* Tablet */
+
+  .container {
+    padding: 0;
+    margin: 0 20px;
+  }
 }
 @media (max-width: 768px) {
   /* Mobile */
@@ -189,10 +194,6 @@ ul {
   .cta-container h2 {
     font-size: 3.8rem;
     line-height: 3.3rem;
-  }
-
-  .container {
-    padding: 0;
   }
 
   .container.flex-row {

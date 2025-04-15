@@ -135,6 +135,10 @@
   .about-right {
     width: 100%;
   }
+
+  .about-logo img {
+    height: 40px;
+  }
   .team {
     flex-direction: column;
     width: fit-content;

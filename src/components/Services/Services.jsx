@@ -29,8 +29,8 @@ const SERVICES = [
     title: "Photography & Film",
     subcategories: [
       "Architectural Documentation",
-      "Video Features",
-      "Walkthrough Videos",
+      "Feature Videos",
+      "Content Creation",
     ],
     images: [
       photography01,
@@ -45,7 +45,7 @@ const SERVICES = [
   },
   {
     title: "Visualization",
-    subcategories: ["Still Renders", "Video Renders", "Walkthrough Videos"],
+    subcategories: ["Still Rendering", "Cinematic Rendering", "360 Panoramas"],
     images: [
       visualization01,
       visualization02,
@@ -58,8 +58,8 @@ const SERVICES = [
   {
     title: "Graphic Design",
     subcategories: [
-      "Project Presentation",
-      "Architectural Boards",
+      "Digital Illustrations",
+      "Architectural Presentation",
       "Project Branding",
     ],
     images: [

@@ -103,8 +103,9 @@ const ProjectDetail = () => {
               autoPlay
               muted
               loop
-              playsinline
+              playsInline
               webkit-playsinline
+              controls={false}
               preload="auto"
               disablePictureInPicture
               disableRemotePlayback

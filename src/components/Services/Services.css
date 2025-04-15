@@ -4,8 +4,13 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--almost-white);
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services-wrapper {
+  width: 100%;
 }
 
 .services {
@@ -70,6 +75,10 @@
   bottom: 0px;
 }
 
+.service-front .subcategories li {
+  hyphens: auto;
+}
+
 .service-item:hover .service-front {
   color: var(--primary-color);
   transition-duration: 500ms;
@@ -84,10 +93,31 @@
   padding: 10px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   /* Tablet */
   .services-section {
-    max-width: 950px;
+    margin: 40px 0;
+  }
+  .services-section h3 {
+    font-size: 2.2rem;
+  }
+
+  .services-wrapper {
+    width: 100%;
+  }
+  .services {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .service-item {
+    width: auto;
+    height: 400px;
+    flex: 0 0 auto;
+    flex-grow: 1;
   }
 }
 @media (max-width: 768px) {
@@ -96,28 +126,38 @@
   .services-section {
     width: 100%;
     overflow-x: hidden;
+    margin: 20px 0;
   }
-  .services {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 20px; /* Add padding to account for scrollbar */
+
+  .services-wrapper {
     width: 100%;
-    gap: 15px;
-    scroll-padding: 200px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
   }
 
-  .services::-webkit-scrollbar {
+  .services-wrapper::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
+  }
+
+  .services {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px; /* Add padding to account for scrollbar */
+    width: 970px; /* Fixed width */
+    min-width: 970px; /* Ensure minimum width */
+    gap: 15px;
+    scroll-padding: 0px;
   }
 
   .service-item {
     width: 300px;
+    min-width: 300px;
     flex: 0 0 auto;
     height: 400px;
     scroll-snap-align: center; /* Change from 'start' to 'center' */
@@ -125,11 +165,11 @@
 
   .service-item:first-child {
     scroll-snap-align: center;
-    margin-left: 20px;
   }
 
+  /* Remove the margin-right from the last item since we're using padding on the container */
   .service-item:last-child {
     scroll-snap-align: center;
-    margin-right: 40px;
+    margin-right: 20px; /* Add margin to the last item */
   }
 }

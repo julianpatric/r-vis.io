@@ -79,16 +79,18 @@ const SERVICES = [
 export default function Services() {
   return (
     <div className="services-section">
-      <ul className="services">
-        {SERVICES.map((service, index) => (
-          <ServiceItem
-            key={service.title}
-            link={service.link}
-            index={index}
-            {...service}
-          />
-        ))}
-      </ul>
+      <div className="services-wrapper">
+        <ul className="services">
+          {SERVICES.map((service, index) => (
+            <ServiceItem
+              key={service.title}
+              link={service.link}
+              index={index}
+              {...service}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

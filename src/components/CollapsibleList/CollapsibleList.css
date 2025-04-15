@@ -7,6 +7,9 @@
 }
 
 .collapsible-button {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.07rem;
+  font-size: 1rem;
   width: 100%;
   background: none;
   border: none;

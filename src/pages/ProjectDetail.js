@@ -99,7 +99,7 @@ const ProjectDetail = () => {
         </div>
         {project.youtubeID && (
           <div className="video-section">
-            <video autoPlay muted loop>
+            <video autoPlay muted loop playsinline>
               <source src={project.videoBgURL} type="video/mp4" />
             </video>
             <div

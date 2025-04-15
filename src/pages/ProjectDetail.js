@@ -99,16 +99,7 @@ const ProjectDetail = () => {
         </div>
         {project.youtubeID && (
           <div className="video-section">
-            <video
-              autoPlay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              preload="auto"
-              disablePictureInPicture
-              disableRemotePlayback
-            >
+            <video autoPlay muted loop>
               <source src={project.videoBgURL} type="video/webm" />
             </video>
             <div

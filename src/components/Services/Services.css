@@ -85,14 +85,6 @@
   height: 200px;
 }
 
-.service-front h3 {
-  transition: padding 300ms ease-in-out;
-}
-
-.service-front:hover h3 {
-  padding: 10px 0;
-}
-
 @media (max-width: 1200px) {
   /* Tablet */
   .services-section {

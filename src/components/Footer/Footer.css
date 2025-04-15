@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 70vh;
+  height: 800px;
   display: flex;
   position: relative;
 }
@@ -159,7 +159,7 @@
   .footer-section {
     width: 100vw;
     padding: 0;
-    min-height: 70vh;
+    min-height: 400px;
     height: auto;
   }
   .footer-main {

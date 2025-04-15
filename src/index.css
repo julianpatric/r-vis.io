@@ -158,10 +158,6 @@ ul {
   width: 60%;
 }
 
-.bottom-space {
-  padding-bottom: var(--spacing-lg);
-}
-
 /* Reveal */
 .reveal {
   overflow-y: hidden;

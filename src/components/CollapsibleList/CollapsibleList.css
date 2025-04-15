@@ -69,8 +69,8 @@
 
 @media (max-width: 768px) {
   /* Mobile */
-  .collapsible-button {
-    font-size: 1.5rem;
+  .collapsible-title {
+    font-size: 1.3rem;
     padding-right: 10px;
   }
 

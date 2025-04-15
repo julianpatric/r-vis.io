@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 650px;
+  max-width: 650px;
   flex-direction: column;
   text-align: center;
   padding: 180px 0;
@@ -19,14 +19,11 @@ span.CTA {
 
 @media (max-width: 1024px) {
   /* Tablet */
-  .cta-container {
-    width: 65%;
-  }
 }
 @media (max-width: 768px) {
   /* Mobile */
   .cta-container {
-    width: 100%;
+    max-width: 450px;
     padding: 50px 0;
   }
 

@@ -109,7 +109,7 @@ const ProjectDetail = () => {
               disablePictureInPicture
               disableRemotePlayback
             >
-              <source src={project.videoBgURL} type="video/mp4" />
+              <source src={project.videoBgURL} type="video/webm" />
             </video>
             <div
               className="video-thumbnail-container"

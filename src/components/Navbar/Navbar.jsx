@@ -5,36 +5,11 @@ import { Link } from "react-router-dom";
 import { Reveal } from "../Reveal";
 
 const Navbar = () => {
-  const [isSticky, setIsSticky] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const navbarRef = useRef(null);
-  const [navbarOffset, setNavbarOffset] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    setNavbarOffset(navbarRef.current?.offsetTop || 0); // Get navbar's initial position
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > navbarOffset) {
-        setIsSticky(true); // Stick when scrolled past navbar's position
-      } else {
-        setIsSticky(false); // Unstick when back to original position
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [navbarOffset]);
-
   const currentPath = window.location.pathname;
 
   return (
     <>
-      <div ref={navbarRef} className={isSticky ? "navbar sticky" : "navbar"}>
+      <div className="navbar">
         <div className="navbar-wrapper">
           <Link
             to="/"
@@ -76,8 +51,6 @@ const Navbar = () => {
           </Reveal>
         </div>
       </div>
-
-      <div className={isSticky ? "filler" : null} />
     </>
   );
 };

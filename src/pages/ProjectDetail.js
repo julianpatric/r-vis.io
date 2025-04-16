@@ -73,37 +73,6 @@ const ProjectDetail = () => {
         <title>
           {project ? `${project.title} | ${project.client} | r-vis` : "r-vis"}
         </title>
-        <meta
-          name="og:title"
-          content={`${project.client} - ${project.title}. Images by r-vis`}
-        />
-        <meta
-          name="description"
-          content={`${project.client} - ${project.title}. Images by r-vis`}
-        />
-        <meta
-          name="og:title"
-          content={`${project.title} | ${project.client} | r-vis`}
-        />
-        <meta
-          name="og:description"
-          content={`${project.client} - ${project.title}. Images by r-vis`}
-        />
-        <meta name="og:image" content={project.cover} />
-        <meta
-          name="og:url"
-          content={`https://r-vis.io/projects/${project.slug}`}
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content={`${project.title} | ${project.client} | r-vis`}
-        />
-        <meta
-          name="twitter:description"
-          content={`${project.client} - ${project.title}. Images by r-vis`}
-        />
-        <meta name="twitter:image" content={project.cover} />
       </Helmet>
       <Hero image={project.cover} halfHeight={true} />
       <Navbar />

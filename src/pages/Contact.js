@@ -108,30 +108,6 @@ export default function Contact() {
     <>
       <Helmet>
         <title>Contact | r—vis</title>
-        <meta name="og:title" content="Contact Page | r—vis" />
-        <meta
-          name="og:description"
-          content="Interested in our services? Fill out this form and our team will respond as soon as possible."
-        />
-        <meta name="og:image" content="%PUBLIC_URL%/og-image.jpg" />
-        <meta name="og:url" content="https://r-vis.io/contact" />
-        <meta name="og:site_name" content="r—vis Contact Page" />
-        <meta name="og:type" content="website" />
-        <meta name="og:locale" content="en_US" />
-        <meta name="og:image:width" content="1200" />
-        <meta name="og:image:height" content="630" />
-        <meta
-          name="og:image:alt"
-          content="r—vis: Visual Communication for Architecture"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://r-vis.io/contact" />
-        <meta name="twitter:title" content="Contact Page | r—vis" />
-        <meta
-          name="twitter:description"
-          content="Specializing in architectural photography and film, visualization, and graphic design, r—vis is a creative studio focused on creating lasting impressions of built and unbuilt spaces. "
-        />
-        <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
       </Helmet>
       <Navbar />
       <div className="main-section">

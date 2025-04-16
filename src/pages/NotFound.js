@@ -8,7 +8,6 @@ export default function NotFound() {
     <>
       <Helmet>
         <title>404: Page not found | r—vis</title>
-        <meta name="description" content="Page not found" />
       </Helmet>
       <div className="not-found">
         <Navbar />

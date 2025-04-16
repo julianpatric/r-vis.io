@@ -14,9 +14,12 @@ export default function Headline({ children }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: i * 0.3 }}
-            style={{ display: "inline-block", marginRight: "0.25em" }}
+            style={{
+              display: "inline-block",
+              marginRight: i < words.length - 1 ? "0.25em" : "0",
+            }}
           >
-            {word}
+            {i < words.length - 1 ? `${word} ` : word}
           </motion.span>
         ))}
       </h1>

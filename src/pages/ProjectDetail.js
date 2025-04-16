@@ -10,6 +10,7 @@ import "../styles/ProjectDetail.css";
 import { useNavigate } from "react-router-dom";
 import YouTube from "react-youtube";
 import { ReactComponent as PlayButton } from "../assets/icons/play-button.svg";
+import { Helmet } from "react-helmet";
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -68,6 +69,38 @@ const ProjectDetail = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {project ? `${project.title} | ${project.client} | r-vis` : "r-vis"}
+        </title>
+        <meta
+          name="description"
+          content={`${project.client} - ${project.title}. Images by r-vis`}
+        />
+        <meta
+          name="og:title"
+          content={`${project.title} | ${project.client} | r-vis`}
+        />
+        <meta
+          name="og:description"
+          content={`${project.client} - ${project.title}. Images by r-vis`}
+        />
+        <meta name="og:image" content={project.cover} />
+        <meta
+          name="og:url"
+          content={`https://r-vis.io/projects/${project.slug}`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={`${project.title} | ${project.client} | r-vis`}
+        />
+        <meta
+          name="twitter:description"
+          content={`${project.client} - ${project.title}. Images by r-vis`}
+        />
+        <meta name="twitter:image" content={project.cover} />
+      </Helmet>
       <Hero image={project.cover} halfHeight={true} />
       <Navbar />
       <div className="main-section">
@@ -89,6 +122,7 @@ const ProjectDetail = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               key={index}
               className={`content ${item.displayType}`}
+              tabIndex="0"
             >
               <motion.img
                 className="content-image"
@@ -126,6 +160,7 @@ const ProjectDetail = () => {
                 className="video-thumbnail"
                 src={`https://img.youtube.com/vi/${project.youtubeID}/maxresdefault.jpg`}
                 alt={`${project.title} video thumbnail`}
+                tabIndex="0"
               />
             </div>
           </div>

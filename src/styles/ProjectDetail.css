@@ -76,12 +76,14 @@
   cursor: pointer;
 }
 
-.video-thumbnail-container:hover {
+.video-thumbnail-container:hover,
+.video-thumbnail-container:focus-within {
   width: 550px;
   transition: ease 500ms;
 }
 
-.video-thumbnail-container:hover .video-thumbnail {
+.video-thumbnail-container:hover .video-thumbnail,
+.video-thumbnail-container:focus-within .video-thumbnail {
   box-shadow: 0 0 100px 10px rgba(109, 131, 135, 1);
   transition: ease 500ms;
 }

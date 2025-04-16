@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Button from "../components/Button/Button";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import CollapsibleList from "../components/CollapsibleList/CollapsibleList";
 
 const FAQS = [
@@ -105,6 +106,9 @@ export default function Contact() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact | r—vis</title>
+      </Helmet>
       <Navbar />
       <div className="main-section">
         <div className="container flex-row">

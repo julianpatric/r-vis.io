@@ -3,7 +3,6 @@ import "./App.css";
 import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./pages/Contact";
 import Test from "./pages/Test";
-import Typography from "./pages/Typography";
 import { Home } from "./pages/Home";
 import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -76,14 +75,6 @@ const AnimatedRoutes = () => {
           element={
             <PageTransition>
               <NotFound />
-            </PageTransition>
-          }
-        />
-        <Route
-          path="/type"
-          element={
-            <PageTransition>
-              <Typography />
             </PageTransition>
           }
         />

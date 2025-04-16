@@ -11,7 +11,7 @@ import logo from "../assets/icons/logo-light.svg";
 import julianImg from "../assets/imgs/about/id2-julian.jpg";
 import kevinImg from "../assets/imgs/about/id2-kev.jpg";
 import lanceImg from "../assets/imgs/about/id2-lance.jpg";
-
+import { Helmet } from "react-helmet";
 const TEAM_MEMBERS = [
   {
     name: "Julian Semilla",
@@ -70,6 +70,9 @@ function About() {
 
   return (
     <>
+      <Helmet>
+        <title>About | r—vis</title>
+      </Helmet>
       <div className="about-hero">
         {/* Scrolling Images */}
         <motion.div
@@ -91,7 +94,7 @@ function About() {
           <div className="about-logo">
             <img src={logo} />
           </div>
-          <Headline>Visual communication for architects.</Headline>
+          <Headline>Visual communication for architecture</Headline>
 
           <div className="learn-more">
             <p>LEARN MORE</p>

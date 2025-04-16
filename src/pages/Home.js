@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import { useScroll } from "motion/react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { Helmet } from "react-helmet";
 import client from "../sanity/client.js";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import Footer from "../components/Footer/Footer.jsx";
@@ -124,6 +124,9 @@ export function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>Visual Communication for Architecture | r—vis</title>
+      </Helmet>
       <Hero />
       <Navbar />
       <div className="main-section">

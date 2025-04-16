@@ -13,7 +13,7 @@ export default function ServiceItem(props) {
 
   return (
     <>
-      <li className="service-item">
+      <li className="service-item" tabIndex="0">
         <div className="service-front">
           <h2>{props.title}</h2>
           <ul className="subcategories">

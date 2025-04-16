@@ -12,6 +12,30 @@ import julianImg from "../assets/imgs/about/id2-julian.jpg";
 import kevinImg from "../assets/imgs/about/id2-kev.jpg";
 import lanceImg from "../assets/imgs/about/id2-lance.jpg";
 
+const TEAM_MEMBERS = [
+  {
+    name: "Julian Semilla",
+    photo: julianImg,
+    title: "1",
+    socials: "julianpatric",
+    link: "#",
+  },
+  {
+    name: "Kevin Nuñez",
+    photo: kevinImg,
+    title: "3",
+    socials: "kevvnunez",
+    link: "#",
+  },
+  {
+    name: "Lance Sy",
+    photo: lanceImg,
+    title: "2",
+    socials: "landssea",
+    link: "#",
+  },
+];
+
 function About() {
   const scrollToSection = () => {
     const section = document.getElementById("target-section");
@@ -43,30 +67,6 @@ function About() {
       requestAnimationFrame(animationStep);
     }
   };
-
-  const TEAM_MEMBERS = [
-    {
-      name: "Julian Semilla",
-      photo: julianImg,
-      title: "1",
-      socials: "@julianpatric",
-      link: "#",
-    },
-    {
-      name: "Kevin Nuñez",
-      photo: kevinImg,
-      title: "3",
-      socials: "@kevvnunez",
-      link: "#",
-    },
-    {
-      name: "Lance Sy",
-      photo: lanceImg,
-      title: "2",
-      socials: "@landssea",
-      link: "#",
-    },
-  ];
 
   return (
     <>
@@ -142,9 +142,11 @@ function About() {
               {TEAM_MEMBERS.map((member, index) => (
                 <Reveal>
                   <li key={member.index}>
-                    <img src={member.photo} />
+                    <a href={`https://www.instagram.com/${member.socials}`}>
+                      <img src={member.photo} />
+                    </a>
                     <p style={{ "font-weight": "700" }}>{member.name}</p>
-                    <p>{member.socials}</p>
+                    <p>@{member.socials}</p>
                   </li>
                 </Reveal>
               ))}

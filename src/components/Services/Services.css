@@ -92,6 +92,12 @@
   height: 200px;
 }
 
+.service-item:focus-within .service-front {
+  color: var(--primary-color);
+  transition-duration: 500ms;
+  height: 200px;
+}
+
 @media (max-width: 1200px) {
   /* Tablet */
   .services-section {

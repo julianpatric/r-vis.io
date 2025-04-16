@@ -116,6 +116,11 @@
   filter: saturate(0);
 }
 
+.team img:hover,
+.team img:focus {
+  filter: saturate(0.3);
+}
+
 .team p {
   margin: -10px 0 0 0;
   text-align: right;

@@ -66,6 +66,10 @@ body {
   color: var(--almost-white);
 }
 
+:focus {
+  outline: 2px solid #000;
+}
+
 /* Typography */
 h1,
 h2 {

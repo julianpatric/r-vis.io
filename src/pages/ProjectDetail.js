@@ -74,6 +74,10 @@ const ProjectDetail = () => {
           {project ? `${project.title} | ${project.client} | r-vis` : "r-vis"}
         </title>
         <meta
+          name="og:title"
+          content={`${project.client} - ${project.title}. Images by r-vis`}
+        />
+        <meta
           name="description"
           content={`${project.client} - ${project.title}. Images by r-vis`}
         />

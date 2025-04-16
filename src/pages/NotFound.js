@@ -1,11 +1,15 @@
 import Navbar from "../components/Navbar/Navbar";
 import "../styles/NotFound.css";
-import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
+import { Helmet } from "react-helmet";
 
 export default function NotFound() {
   return (
     <>
+      <Helmet>
+        <title>404: Page not found | r—vis</title>
+        <meta name="description" content="Page not found" />
+      </Helmet>
       <div className="not-found">
         <Navbar />
         <div className="wrapper">

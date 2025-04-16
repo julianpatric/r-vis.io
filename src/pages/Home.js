@@ -147,7 +147,7 @@ export function Home() {
                   <motion.img
                     className="content-image"
                     src={item.url}
-                    alt={item.caption}
+                    alt={item.alt}
                   />
                 </Link>
 

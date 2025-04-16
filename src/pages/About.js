@@ -124,14 +124,14 @@ function About() {
         <div className="container">
           <Reveal>
             <h3 className="bio" id="target-section">
-              <span style={{ "font-weight": "700" }}>r—vis</span> is a creative
+              <span style={{ fontWeight: "700" }}>r—vis</span> is a creative
               studio focused on creating lasting impressions of built and
               unbuilt spaces. Specializing in{" "}
-              <span style={{ "font-weight": "700" }}>
+              <span style={{ fontWeight: "700" }}>
                 architectural photography and film
               </span>
-              , <span style={{ "font-weight": "700" }}>visualization</span>, and{" "}
-              <span style={{ "font-weight": "700" }}>graphic design</span>, we
+              , <span style={{ fontWeight: "700" }}>visualization</span>, and{" "}
+              <span style={{ fontWeight: "700" }}>graphic design</span>, we
               craft compelling visuals that translate concepts into immersive
               narratives.
             </h3>
@@ -140,12 +140,12 @@ function About() {
           <div className="about-right">
             <ul className="team">
               {TEAM_MEMBERS.map((member, index) => (
-                <Reveal>
-                  <li key={member.index}>
+                <Reveal key={index}>
+                  <li>
                     <a href={`https://www.instagram.com/${member.socials}`}>
                       <img src={member.photo} />
                     </a>
-                    <p style={{ "font-weight": "700" }}>{member.name}</p>
+                    <p style={{ fontWeight: "700" }}>{member.name}</p>
                     <p>@{member.socials}</p>
                   </li>
                 </Reveal>

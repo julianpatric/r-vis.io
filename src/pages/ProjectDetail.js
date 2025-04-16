@@ -30,7 +30,8 @@ const ProjectDetail = () => {
               "cover": coverPhoto.asset->url+ "?w=2500",
               "images": images[]{
                 "url": asset->url + "?w=1500",
-                displayType
+                displayType,
+                alt,
               },
               "slug": slug.current,
               youtubeID,
@@ -92,7 +93,11 @@ const ProjectDetail = () => {
               <motion.img
                 className="content-image"
                 src={item.url}
-                alt={item.caption}
+                alt={
+                  item.alt
+                    ? item.alt
+                    : `${project.title} by ${project.client}. Image by r-vis`
+                }
               />
             </motion.div>
           ))}
@@ -120,7 +125,7 @@ const ProjectDetail = () => {
               <img
                 className="video-thumbnail"
                 src={`https://img.youtube.com/vi/${project.youtubeID}/maxresdefault.jpg`}
-                alt={project.title}
+                alt={`${project.title} video thumbnail`}
               />
             </div>
           </div>

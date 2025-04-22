@@ -1,0 +1,180 @@
+.services-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--almost-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services-wrapper {
+  width: 100%;
+}
+
+.services {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: row;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.service-item {
+  height: 430px;
+  width: calc(100% - 40px);
+  background-color: lightgray;
+  position: relative;
+}
+
+.service-front {
+  position: absolute;
+  bottom: 0;
+  justify-content: space-between;
+  height: calc(100% - 40px);
+  border: solid var(--primary-color) 0.5px;
+  text-align: left;
+  transition-duration: 300ms;
+  padding: 20px;
+  background-color: var(--almost-white);
+  width: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.service-front h2 {
+  font-size: 2.618rem;
+  line-height: 2.9rem;
+  letter-spacing: var(--letter-spacing-med);
+  margin: 0;
+}
+
+.service-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  z-index: 1;
+  transition-duration: 300ms;
+  opacity: 1;
+  background-size: cover;
+}
+
+.service-back.fade {
+  opacity: 0;
+}
+
+.service-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-front .subcategories {
+  position: relative;
+  bottom: 0px;
+}
+
+.service-front .subcategories li {
+  hyphens: auto;
+}
+
+.service-item:hover .service-front {
+  color: var(--primary-color);
+  transition-duration: 500ms;
+  height: 200px;
+}
+
+.service-item:focus-within .service-front {
+  color: var(--primary-color);
+  transition-duration: 500ms;
+  height: 200px;
+}
+
+@media (max-width: 1200px) {
+  /* Tablet */
+  .services-section {
+    margin: 40px 0;
+  }
+  .services-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .services-wrapper {
+    width: 100%;
+  }
+  .services {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .service-item {
+    width: auto;
+    height: 400px;
+    flex: 0 0 auto;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 768px) {
+  /* Mobile */
+
+  .services-section {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 20px 0;
+  }
+
+  .services-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  .services-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .services {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px; /* Add padding to account for scrollbar */
+    width: 970px; /* Fixed width */
+    min-width: 970px; /* Ensure minimum width */
+    gap: 15px;
+    scroll-padding: 0px;
+  }
+
+  .service-item {
+    width: 300px;
+    min-width: 300px;
+    flex: 0 0 auto;
+    height: 400px;
+    scroll-snap-align: center; /* Change from 'start' to 'center' */
+  }
+
+  .service-item:first-child {
+    scroll-snap-align: center;
+  }
+
+  /* Remove the margin-right from the last item since we're using padding on the container */
+  .service-item:last-child {
+    scroll-snap-align: center;
+    margin-right: 20px; /* Add margin to the last item */
+  }
+}

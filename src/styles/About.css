@@ -1,0 +1,169 @@
+@keyframes arrow {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  95% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+}
+.about-hero {
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--almost-white);
+  overflow: hidden;
+}
+
+.about-hero .container {
+  padding: 0;
+  margin: auto;
+  align-items: center;
+  color: var(--almost-white);
+  display: flex;
+}
+
+/* Image Scrolling */
+.scrolling-images {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  white-space: nowrap;
+  z-index: -2;
+  opacity: 0.5;
+}
+
+.scroll-img {
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.about-hero p {
+  cursor: pointer;
+  text-align: center;
+}
+
+.about-logo {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+  justify-content: center;
+}
+
+.about-logo img {
+  height: 80px;
+}
+
+.learn-more {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.arrow-container {
+  width: fit-content;
+  margin: 0 auto 30px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-arrow {
+  position: relative;
+  animation: arrow 3.5s ease infinite;
+  pointer-events: none;
+}
+
+.bio {
+  font-weight: 400;
+  width: 1000px;
+}
+
+.story {
+  text-align: justify;
+}
+
+.about-right {
+  width: 550px;
+  margin-left: auto;
+}
+.team {
+  display: flex;
+  justify-content: space-between;
+  margin: var(--spacing-md) 0;
+}
+.team img {
+  width: 170px;
+  margin-bottom: 10px;
+  background-color: var(--light-gray);
+  height: 170px;
+  filter: saturate(0);
+}
+
+.team img:hover,
+.team img:focus {
+  filter: saturate(0.3);
+}
+
+.team p {
+  margin: -10px 0 0 0;
+  text-align: right;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  /* Tablet */
+  .about-hero .container {
+    max-width: 700px;
+  }
+
+  .about-hero h1 {
+    font-size: 5.8rem;
+  }
+  .bio {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /* Mobile */
+
+  .about-hero {
+    height: 95vh;
+  }
+
+  .about-right {
+    width: 100%;
+  }
+
+  .about-logo img {
+    height: 40px;
+  }
+  .team {
+    flex-direction: column;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  .about-hero h1 {
+    font-size: 3.2rem;
+    letter-spacing: -0.2rem;
+    position: relative;
+    left: 5px;
+  }
+}

@@ -1,0 +1,20 @@
+.headline-section {
+  height: 330px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  /* Tablet */
+}
+@media (max-width: 768px) {
+  /* Mobile */
+
+  .headline-section {
+    height: 240px;
+  }
+}

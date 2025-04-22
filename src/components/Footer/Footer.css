@@ -1,0 +1,219 @@
+.footer-section {
+  background-color: var(--primary-color);
+  color: var(--almost-white);
+  padding: 0 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 800px;
+  display: flex;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 3;
+}
+
+.footer-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: url("../../assets/icons/logotype-light.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-7.5%);
+  opacity: 0.02;
+  width: 100%;
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-email {
+  width: auto;
+  padding: 20px 0;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-email .email {
+  font-size: 3rem;
+  line-height: 3.3rem;
+  font-weight: 700;
+  border-bottom: solid transparent 3px;
+  transition-duration: 300ms;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-email .email:hover {
+  border-bottom: solid var(--almost-white) 2px;
+  transition-duration: 300ms;
+}
+
+.footer-email .tooltip {
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--almost-white);
+  color: var(--primary-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin-top: 8px;
+  animation: fadeIn 0.2s ease-in-out;
+  line-height: 1.2rem;
+}
+
+.footer-email .tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--almost-white) transparent;
+}
+
+.footer-email p {
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.footer-sitemap {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  line-height: 1.8rem;
+}
+
+.sitemap-header {
+  font-weight: 700;
+}
+
+.footer-sitemap a {
+  color: var(--light-gray);
+  transition-duration: 300ms;
+}
+
+.footer-sitemap a:hover {
+  color: var(--almost-white);
+  transition-duration: 300ms;
+}
+
+.footer-sitemap ul {
+  width: auto;
+}
+
+.footer-copyright {
+  height: 10%;
+  padding: 44px 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: solid var(--light-gray) 0.5px;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-logo:hover {
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  /* Tablet */
+}
+@media (max-width: 768px) {
+  /* Mobile */
+  .footer-section {
+    width: 100vw;
+    padding: 0;
+    min-height: 400px;
+    height: auto;
+  }
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    width: 100%;
+    padding: 100px 0;
+  }
+  .footer-email {
+    height: auto;
+    min-height: 100px;
+    width: 100%;
+    align-items: flex-start;
+    margin-left: 40px;
+    overflow-x: hidden;
+    max-width: calc(100% - 40px);
+    padding: 10px 0;
+  }
+
+  .footer-email .email {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
+  .footer-sitemap {
+    width: 90%;
+    justify-content: left;
+    gap: 100px;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  .footer-copyright {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .footer-copyright p {
+    font-size: 0.8rem;
+    margin-right: var(--spacing-sm);
+  }
+
+  .footer-container img {
+    margin-left: var(--spacing-sm);
+    height: 20px;
+  }
+
+  .footer-email .tooltip {
+    top: -50px;
+    transform: translateX(-50%);
+  }
+
+  .footer-email .tooltip::after {
+    bottom: -10px;
+    border-color: var(--almost-white) transparent transparent transparent;
+  }
+}

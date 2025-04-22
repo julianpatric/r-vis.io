@@ -1,0 +1,40 @@
+.navbar {
+  height: 80px;
+  background-color: var(--almost-white);
+  position: sticky;
+  width: 100%;
+  transition-duration: 500ms;
+  z-index: 99;
+  top: 0;
+}
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  justify-content: space-between;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.nav a:hover {
+  border-bottom: solid var(--primary-color) 2px;
+  transition-duration: 200ms;
+}
+
+.navbar .active {
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  /* Mobile */
+
+  .navbar {
+    width: 100vw;
+  }
+}

@@ -1,0 +1,39 @@
+.not-found {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--almost-white);
+  background-image: url("../assets/bg-wireframe.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+.not-found .navbar {
+  background-color: transparent;
+}
+
+.not-found .wrapper {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found .footer {
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  line-height: 0.5rem;
+}
+
+.not-found h2 {
+  margin: 1.5rem, 0;
+}

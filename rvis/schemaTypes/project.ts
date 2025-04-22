@@ -1,0 +1,130 @@
+import {defineField, defineType} from 'sanity'
+
+export default defineType({
+  name: 'project',
+  title: 'Projects',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'title',
+      title: 'Project Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+    }),
+    defineField({
+      name: 'client',
+      title: 'Client Name',
+      type: 'string',
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+    }),
+    defineField({
+      name: 'coverPhoto',
+      title: 'Cover Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
+    defineField({
+      name: 'images',
+      title: 'Photos',
+      type: 'array',
+      of: [
+        {
+          name: 'image',
+          type: 'image',
+          title: 'Image',
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: 'displayType',
+              type: 'string',
+              title: 'Display Type',
+              description: 'How should we display this image?',
+              options: {
+                list: [
+                  {title: 'Full-row image', value: 'full-row'},
+                  {title: 'Two-column image', value: 'two-column'},
+                  {title: 'Isolated image', value: 'isolate'},
+                ],
+                layout: 'radio',
+              },
+            },
+            {
+              name: 'alt',
+              type: 'string',
+              title: 'Alternative text',
+              description: 'Short description for accessibility.',
+            },
+            {
+              name: 'caption',
+              type: 'string',
+              title: 'Caption',
+              description: 'will be displayed at the bottom right of this image.',
+            },
+            {
+              name: 'link',
+              type: 'string',
+              title: 'Links to',
+              description: 'URL Slug that this image will be linked to. For homepage use only.',
+            },
+          ],
+        },
+      ],
+      options: {
+        layout: 'grid',
+      },
+    }),
+    defineField({
+      name: 'youtubeID',
+      title: 'Youtube Video ID',
+      type: 'string',
+      description: 'Enter the ID of the Youtube video you want to embed.',
+    }),
+
+    defineField({
+      name: 'videoBg',
+      title: 'Video Background',
+      type: 'file',
+    }),
+    defineField({
+      name: 'endtag',
+      title: 'Endtag',
+      type: 'string',
+      description: 'Text shown at the bottom of the page.',
+    }),
+
+    defineField({
+      name: 'endtagLink',
+      title: 'Endtag Link',
+      type: 'string',
+      description: 'Link for the endtag.',
+    }),
+  ],
+
+  preview: {
+    select: {
+      title: 'title',
+      author: 'author.name',
+      media: 'coverPhoto',
+    },
+    prepare(selection) {
+      const {author} = selection
+      return {...selection, subtitle: author && `by ${author}`}
+    },
+  },
+})

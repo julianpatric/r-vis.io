@@ -49,13 +49,13 @@ export default function Footer() {
               <ul>
                 <li className="sitemap-header">socials</li>
                 <li>
-                  <Link to="instagram">instagram</Link>
+                  <a href="https://www.instagram.com/r_vis.io">instagram</a>
                 </li>
                 <li>
-                  <Link to="facebook">facebook</Link>
+                  <a href="https://www.facebook.com/r-vis.io">facebook</a>
                 </li>
                 <li>
-                  <Link to="/youtube">youtube</Link>
+                  <a href="https://www.youtube.com/@r-vis.studio">youtube</a>
                 </li>
               </ul>
             </Reveal>

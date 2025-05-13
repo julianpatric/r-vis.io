@@ -14,6 +14,9 @@ import CTA from "../components/CTA/CTA";
 import LoadingScreen from "../components/LoadingScreen/LoadingScreen";
 import "../styles/ContentGrid.css";
 
+// Debug toggle for simulating longer loading time
+const DEBUG_SIMULATE_LOADING = false;
+
 export function Home() {
   const [projects, setProjects] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -30,6 +33,12 @@ export function Home() {
     const fetchProjects = async () => {
       try {
         setIsLoading(true);
+
+        // Simulate longer loading time if debug mode is enabled
+        if (DEBUG_SIMULATE_LOADING) {
+          await new Promise((resolve) => setTimeout(resolve, 10000));
+        }
+
         const data = await client.fetch(
           `*[_type == "project" && slug.current == 'homepage-items'][0]{
             "defaultHero": coverPhoto.asset->url+ "?w=2500",

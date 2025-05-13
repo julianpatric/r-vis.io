@@ -47,15 +47,19 @@ export default function Footer() {
             </Reveal>
             <Reveal>
               <ul>
-                <li className="sitemap-header">socials</li>
+                <li className="sitemap-header">more</li>
                 <li>
                   <a href="https://www.instagram.com/r_vis.io">instagram</a>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/r-vis.io">facebook</a>
+                  <a href="https://www.archdaily.com/photographer/r-vis-kevin-nunez-lance-sy-julian-patric-semilla">
+                    archdaily
+                  </a>
                 </li>
                 <li>
-                  <a href="https://www.youtube.com/@r-vis.studio">youtube</a>
+                  <a href="https://www.behance.net/gallery/223535179/rvis-Visual-Identity">
+                    brand
+                  </a>
                 </li>
               </ul>
             </Reveal>

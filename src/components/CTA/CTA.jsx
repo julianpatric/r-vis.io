@@ -7,7 +7,7 @@ export default function CTA() {
     <div className="cta-container">
       <Reveal>
         <br />
-        <span class="CTA">
+        <span className="CTA">
           Your ideas, our visuals. Let’s share the stories of spaces.
         </span>
       </Reveal>

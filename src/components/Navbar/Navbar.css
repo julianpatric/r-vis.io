@@ -25,7 +25,6 @@
 
 .nav a:hover {
   border-bottom: solid var(--primary-color) 2px;
-  transition-duration: 200ms;
 }
 
 .navbar .active {

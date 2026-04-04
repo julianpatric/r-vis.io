@@ -1,5 +1,4 @@
 import "../index.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import LenisProvider from "../components/LenisProvider";
 import Script from "next/script";
 
@@ -62,7 +61,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <LenisProvider>{children}</LenisProvider>
-        <SpeedInsights />
         <Script
           src="https://scripts.simpleanalyticscdn.com/latest.js"
           strategy="afterInteractive"

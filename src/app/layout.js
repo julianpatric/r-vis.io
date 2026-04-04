@@ -5,8 +5,7 @@ import Script from "next/script";
 
 export const metadata = {
   title: {
-    default:
-      "r—vis: Visual Communication for Architecture - Photography & Film, Visualization, Graphic Design.",
+    default: "r—vis: Visual Communication for Architecture.",
     template: "%s | r—vis",
   },
   description:

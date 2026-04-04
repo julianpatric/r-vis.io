@@ -1,4 +1,5 @@
 import "../index.css";
+import ClarityAnalytics from "../components/ClarityAnalytics";
 import LenisProvider from "../components/LenisProvider";
 import Script from "next/script";
 
@@ -61,6 +62,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <LenisProvider>{children}</LenisProvider>
+        <ClarityAnalytics />
         <Script
           src="https://scripts.simpleanalyticscdn.com/latest.js"
           strategy="afterInteractive"

@@ -30,7 +30,7 @@ export const metadata = {
     siteName: "r—vis",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://r-vis.io/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "r—vis: Visual Communication for Architecture",

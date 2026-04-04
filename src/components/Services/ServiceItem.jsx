@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 
 export default function ServiceItem(props) {
@@ -8,8 +10,11 @@ export default function ServiceItem(props) {
       setImageIndex((prev) => (prev + 1) % props.images.length);
     }, 1000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);
   }, []);
+
+  const img = props.images[imageIndex];
+  const imgSrc = typeof img === "string" ? img : img.src;
 
   return (
     <>
@@ -23,7 +28,7 @@ export default function ServiceItem(props) {
           </ul>
         </div>
         <div className="service-back">
-          <img src={props.images[imageIndex]} alt={props.title} />
+          <img src={imgSrc} alt={props.title} />
         </div>
       </li>
     </>

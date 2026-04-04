@@ -1,11 +1,7 @@
+"use client";
+
 import { motion, useAnimation, useInView } from "motion/react";
 import { useEffect, useRef } from "react";
-import React from "react";
-
-const Props = {
-  children: React.ReactNode,
-  width: "fit-content" | "100%",
-};
 
 export const Reveal = ({ children, width = "fit-content" }) => {
   const ref = useRef(null);

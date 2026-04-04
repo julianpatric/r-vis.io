@@ -1,39 +1,41 @@
+"use client";
+
 import logo from "../../assets/icons/logo-dark.svg";
 import "./Navbar.css";
-import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Reveal } from "../Reveal";
 
 const Navbar = () => {
-  const currentPath = window.location.pathname;
+  const currentPath = usePathname();
 
   return (
     <>
       <div className="navbar">
         <div className="navbar-wrapper">
           <Link
-            to="/"
+            href="/"
             onClick={(e) => {
-              if (window.location.pathname === "/") {
+              if (currentPath === "/") {
                 e.preventDefault();
                 window.location.reload();
               }
             }}
           >
             <Reveal>
-              <img src={logo} alt="r—vis logo" height="32px" />
+              <img src={logo.src} alt="r—vis logo" height="32px" />
             </Reveal>
           </Link>
           <Reveal>
             <ul className="nav">
               <li>
-                <Link to="/" className={currentPath === "/" ? "active" : ""}>
+                <Link href="/" className={currentPath === "/" ? "active" : ""}>
                   home
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/about"
+                  href="/about"
                   className={currentPath === "/about" ? "active" : ""}
                 >
                   about
@@ -41,7 +43,7 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className={currentPath === "/contact" ? "active" : ""}
                 >
                   contact

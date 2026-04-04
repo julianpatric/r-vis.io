@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 161.8 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #092b33;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="Assets_Export" data-name="Assets Export">
+    <g>
+      <path class="cls-1" d="M130.91,100c-.26-4.39,1.38-8.69,4.49-11.8l26.4-26.4V0h-23.6l-38.2,38.2v61.8h30.91Z"/>
+      <path class="cls-1" d="M55.87,100c.28-11.62,5.02-22.68,13.23-30.9,0,0,30.9-30.9,30.9-30.9V0H0v100h55.87Z"/>
+    </g>
+  </g>
+</svg>

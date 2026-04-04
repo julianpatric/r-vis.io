@@ -1,6 +1,6 @@
 # r-vis.io
 
-Portfolio site for **r—vis**: a React single-page app that loads project and homepage content from [Sanity](https://www.sanity.io/), with smooth scrolling (Lenis), page transitions (Motion), and deployment-oriented extras (sitemap generation, Vercel Speed Insights).
+Portfolio site for **r—vis**: a Next.js app that loads project and homepage content from [Sanity](https://www.sanity.io/), with smooth scrolling (Lenis), page transitions (Motion), and deployment-oriented extras (sitemap generation, Vercel Speed Insights).
 
 **Live site:** [https://r-vis.io](https://r-vis.io)
 
@@ -8,27 +8,35 @@ Portfolio site for **r—vis**: a React single-page app that loads project and h
 
 | Area | Choice |
 |------|--------|
-| UI | React 19, Create React App (`react-scripts` 5) |
-| Routing | React Router 7 |
-| Styling | Styled Components, Tailwind CSS 4 (PostCSS) |
-| CMS | Sanity (`@sanity/client`), read-only from the app |
+| Framework | Next.js 15 (App Router) |
+| UI | React 19 |
+| Styling | CSS (global stylesheets) |
+| CMS | Sanity (`@sanity/client`) — server-side fetch for project pages, client-side elsewhere |
 | Motion | Motion (Framer Motion successor), Lenis smooth scroll |
-| Other | React Helmet, React Hook Form, react-youtube |
+| Other | React Hook Form, react-youtube |
 
 ## Repository layout
 
 ```
-├── public/              # Static assets; `sitemap.xml` is generated here on build
+├── public/              # Static assets; sitemap.xml generated on build
 ├── scripts/
 │   └── generate-sitemap.js   # Builds sitemap from Sanity project slugs
 ├── rvis/                # Sanity Studio (separate package.json)
 │   ├── schemaTypes/     # Content models (projects, homepage items, etc.)
 │   └── sanity.config.ts
 └── src/
+    ├── app/             # Next.js App Router pages
+    │   ├── layout.js    # Root layout (metadata, Lenis, analytics)
+    │   ├── template.js  # Page transition animation wrapper
+    │   ├── page.js      # Home
+    │   ├── about/
+    │   ├── contact/
+    │   ├── projects/[slug]/  # Server-side Sanity fetch + client detail view
+    │   ├── test/
+    │   └── not-found.js
     ├── components/
-    ├── pages/           # Home, About, Contact, ProjectDetail, NotFound, Test
     ├── sanity/client.js # Sanity client (project id + dataset)
-    └── App.js           # Routes + Lenis + Speed Insights
+    └── styles/
 ```
 
 ## Prerequisites
@@ -41,7 +49,7 @@ Install dependencies and start the dev server:
 
 ```bash
 npm install
-npm start
+npm run dev
 ```
 
 The app runs at [http://localhost:3000](http://localhost:3000).
@@ -50,17 +58,19 @@ The app runs at [http://localhost:3000](http://localhost:3000).
 
 | Command | Description |
 |---------|-------------|
-| `npm start` | Development server with hot reload |
-| `npm test` | Jest / React Testing Library (watch mode) |
-| `npm run build` | Production build to `build/`, then runs `generate-sitemap` |
-| `npm run generate-sitemap` | Writes `public/sitemap.xml` using Sanity project URLs |
-| `npm run eject` | Irreversible CRA eject (only if you need full webpack control) |
+| `npm run dev` | Development server with hot reload |
+| `npm run build` | Production build, then generates `public/sitemap.xml` |
+| `npm start` | Serve the production build |
+| `npm run lint` | Run Next.js ESLint checks |
+| `npm run generate-sitemap` | Write `public/sitemap.xml` from Sanity project URLs |
 
-The sitemap script uses the same Sanity project as the app and assumes the production base URL `https://r-vis.io`. Adjust `baseUrl` in `scripts/generate-sitemap.js` if you deploy elsewhere.
+The sitemap script assumes the production base URL `https://r-vis.io`. Adjust `baseUrl` in `scripts/generate-sitemap.js` if you deploy elsewhere.
 
 ### Sanity connection
 
-The browser client is configured in `src/sanity/client.js` (project id, dataset, API version). The dataset is expected to be **public read** for anonymous fetches, or you would need a token-based setup and env-based config for private datasets.
+The Sanity client is configured in `src/sanity/client.js` (project ID, dataset, API version). The dataset uses **public** read access for anonymous fetches — no API token is needed in the frontend.
+
+Project detail pages (`/projects/[slug]`) are **server-rendered**: the page component fetches from Sanity on the server and passes data to a client component, giving you SEO-friendly HTML without exposing queries in the browser.
 
 ## Content studio (`rvis/`)
 
@@ -78,13 +88,13 @@ Typical Studio commands (see `rvis/package.json`):
 - `npm run build` — build the studio
 - `npm run deploy` — deploy the studio (Sanity hosting)
 
-Schema definitions are under `rvis/schemaTypes/`. The frontend queries documents such as `project` (including a special slug used for homepage items).
+Schema definitions are under `rvis/schemaTypes/`.
 
 ## Deployment notes
 
-- **Build:** `npm run build` produces the static bundle and refreshes `public/sitemap.xml` for SEO.
-- **Vercel:** `@vercel/speed-insights` is wired in `App.js` for production analytics.
+- **Build:** `npm run build` produces the `.next` bundle and refreshes `public/sitemap.xml` for SEO.
+- **Vercel:** `@vercel/speed-insights` is wired in the root layout for production analytics. Deploy as a standard Next.js project on Vercel with zero extra config.
 
 ## License
 
-Private project (`private: true` in `package.json`). The `rvis` studio package is marked `UNLICENSED` in its own `package.json`.
+Private project (`private: true` in `package.json`).

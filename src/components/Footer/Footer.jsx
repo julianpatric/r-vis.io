@@ -1,6 +1,8 @@
+"use client";
+
 import "./Footer.css";
 import logotype from "../../assets/icons/logotype-light.svg";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Reveal } from "../Reveal";
 import { useState } from "react";
 
@@ -35,13 +37,13 @@ export default function Footer() {
               <ul>
                 <li className="sitemap-header">navigate</li>
                 <li>
-                  <Link to="/">home</Link>
+                  <Link href="/">home</Link>
                 </li>
                 <li>
-                  <Link to="/about">about</Link>
+                  <Link href="/about">about</Link>
                 </li>
                 <li>
-                  <Link to="/contact">contact</Link>
+                  <Link href="/contact">contact</Link>
                 </li>
               </ul>
             </Reveal>
@@ -67,8 +69,8 @@ export default function Footer() {
         </div>
         <div className="footer-copyright">
           <Reveal>
-            <Link to="/" className="footer-logo">
-              <img src={logotype} alt="Logo" height="30px" />
+            <Link href="/" className="footer-logo">
+              <img src={logotype.src} alt="Logo" height="30px" />
             </Link>
           </Reveal>
           <Reveal>

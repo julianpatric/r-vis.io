@@ -29,11 +29,17 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${project.title} | ${project.client}`,
-    description: project.description,
+    description: project.description
+      ? project.description
+      : `${project.client} - ${project.title}, photographed by r-vis: Visual Communication for Architecture`,
     openGraph: {
       title: `${project.title} | ${project.client} | r—vis`,
-      description: project.description,
+      description: `${project.client} - ${project.title}, photographed by r-vis: Visual Communication for Architecture`,
       images: project.cover ? [{ url: project.cover }] : [],
+      url: `https://r-vis.io/projects/${project.slug}`,
+      siteName: "r—vis",
+      locale: "en_US",
+      type: "website",
     },
   };
 }
